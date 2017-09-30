@@ -2,8 +2,7 @@
 
 ## 第一章
 
-* [简介](README.md)
-* [Docker到底是什么？](dockerdao-di-shi-shi-yao-ff1f.md)
+* [Docker 到底是什么？](README.md)
 * [centos 7.0 安装 docker](centos-70-an-zhuang-docker.md)
 
 ## 第二章：持续集成
