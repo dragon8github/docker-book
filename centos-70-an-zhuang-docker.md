@@ -4,5 +4,7 @@
 sudo yum install docker -y
 ```
 
+安装成功！
+
 ![](/assets/21312312312312.png)
 
