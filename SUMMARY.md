@@ -8,4 +8,5 @@
 ## 扩展阅读
 
 * [第三方教程](kuo-zhan-yue-du/di-san-fang-jiao-cheng.md)
+* [疑难杂症](kuo-zhan-yue-du/yi-nan-za-zheng.md)
 
