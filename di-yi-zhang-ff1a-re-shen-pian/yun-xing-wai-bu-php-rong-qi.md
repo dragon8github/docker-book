@@ -46,11 +46,11 @@ sudo systemctl restart docker  # 重启docker
 
 ### 开始下载一个镜像
 
-回到阿里云的镜像仓库：https://dev.aliyun.com/search.html
+回到阿里云的镜像仓库：[https://dev.aliyun.com/search.html](https://dev.aliyun.com/search.html)
 
 进行搜索 ，譬如输入关键字：PHP
 
-我们选取一个下载次数还算多的镜像作为学习测试：https://dev.aliyun.com/detail.html?repoId=1666
+我们选取一个下载次数还算多的镜像作为学习测试：[https://dev.aliyun.com/detail.html?repoId=1666](https://dev.aliyun.com/detail.html?repoId=1666)
 
 根据提示执行命令：
 
@@ -60,5 +60,29 @@ sudo systemctl restart docker  # 重启docker
 
 > $ docker images
 
-![](/assets/2312import.png)
+### ![](/assets/2312import.png)
+
+---
+
+### 镜像已经有了，接下来怎么办？
+
+想想虚拟机的话，肯定要启动我们的虚拟机嘛~~~
+
+> $ docker run -d -p 8080:80 \[名称 \| ID\]
+
+run :把我们的镜像放入容器中（只在第一次运行\)
+
+-d启动容器后台运行，并返回ID；
+
+-p把容器的80端口映射到宿主机的8080
+
+---
+
+### 列出所有运行中容器
+
+> $ docker ps
+
+
+
+
 
