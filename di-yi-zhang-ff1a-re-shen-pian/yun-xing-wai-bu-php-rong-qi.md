@@ -93,7 +93,7 @@ run 把我们的镜像放入容器中（只在第一次运行\)
 
 一切准备就绪，开始访问我们的站点服务器。但在这之前需要跨过几个坑先。
 
-1、**【IPv4forwarding is disabled.Networkingwill not work.】**
+**1、【IPv4forwarding is disabled.Networkingwill not work.】**
 
 解决办法：\(Linux内核参数配置文件，可在运行时修改某些内核参数，使之永久生效\)
 
@@ -105,13 +105,15 @@ run 把我们的镜像放入容器中（只在第一次运行\)
 
 > $ systemctlrestart network
 
-2、阿里云的安全组配置，请查看[《第零章：阿里云上购买并配置Centos7》](https://dragon8github.gitbooks.io/docker/content/a-li-yun-shang-gou-mai-he-pei-zhi-centos7.html)
+**2、阿里云的安全组配置**
 
-3、防火墙放行8080端口示例
+请查看[《第零章：阿里云上购买并配置Centos7》](https://dragon8github.gitbooks.io/docker/content/a-li-yun-shang-gou-mai-he-pei-zhi-centos7.html)
+
+**3、防火墙放行8080端口示例**
 
 > $ iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
 
-现在，正常在浏览器上访问我们的ip + 8080端口，应该可以看到php信息页面，具体如下
+现在，正常在浏览器上访问我们的 ip + 8080端口，如果可以看到php信息页面，就说明成功了。具体如下
 
 ![](/assets/123123123import.png)
 
