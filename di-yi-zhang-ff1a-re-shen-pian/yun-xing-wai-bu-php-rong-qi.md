@@ -44,5 +44,21 @@ sudo systemctl daemon-reload  # 重载所有修改过的配置文件,扫描新�
 sudo systemctl restart docker  # 重启docker
 ```
 
+### 开始下载一个镜像
 
+回到阿里云的镜像仓库：https://dev.aliyun.com/search.html
+
+进行搜索 ，譬如输入关键字：PHP
+
+我们选取一个下载次数还算多的镜像作为学习测试：https://dev.aliyun.com/detail.html?repoId=1666
+
+根据提示执行命令：
+
+> $ docker pull registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5
+
+![](/assets/21import.png)下载完成之后，使用以下命令命令查看镜像
+
+> $ docker images
+
+![](/assets/2312import.png)
 
