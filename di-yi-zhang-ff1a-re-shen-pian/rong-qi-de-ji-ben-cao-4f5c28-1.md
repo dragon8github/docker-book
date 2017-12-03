@@ -28,7 +28,11 @@
 
 > $ docker ps -a
 
-![](/assets/32525import.png)
+![](/assets/32525import.png)4、删除所有镜像
+
+> $ docker rm &lt;CONTAINER ID&gt;
+
+![](/assets/100import.png)
 
 ---
 
