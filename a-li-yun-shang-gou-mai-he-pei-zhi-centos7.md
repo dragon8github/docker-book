@@ -12,9 +12,7 @@
 
 > $ iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
 
-
-
-### 修改系统盘配置，譬如我想从Centos6 升级到 centos7
+### 修改系统盘配置，譬如我想从Centos6 升级到 Centos7
 
 1、先停止
 
