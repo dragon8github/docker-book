@@ -26,17 +26,13 @@ docker安装时默认创建了docker用户组，将普通用户加入 docker 用
 
 ![](/assets/12import.png)
 
-
-
 阿里云的镜像加速器传送门：[https://cr.console.aliyun.com/\#/accelerator](https://cr.console.aliyun.com/#/accelerator)
-
-
 
 ![](/assets/8import.png)
 
 请注意，每个人的加速器地址都不一样，所以需要根据自己的加速器地址来进行配置。
 
-```bash
+```py
 sudo mkdir -p /etc/docker     #创建一个文件夹 叫做docker
 sudo tee /etc/docker/daemon.json <<-'EOF'   #利用tee 命令把下面的配置写入 daemon.json
 {
