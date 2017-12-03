@@ -30,15 +30,16 @@ docker安装时默认创建了docker用户组，将普通用户加入 docker 用
 
 请注意，每个人的加速器地址都不一样，所以需要根据自己的加速器地址来进行配置。
 
-```
-sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json <<-'EOF'
+```bash
+sudo mkdir -p /etc/docker     #创建一个文件夹 叫做docker
+sudo tee /etc/docker/daemon.json <<-'EOF'   #利用tee 命令把下面的配置写入 daemon.json
 {
-  "registry-mirrors": ["https://这是你的加速器地址.mirror.aliyuncs.com"]
+  "registry-mirrors": ["https://xxxx.mirror.aliyuncs.com"]  #这里要改成你们自己的 地址
 }
 EOF
-sudo systemctl daemon-reload
-sudo systemctl restart docker
+
+sudo systemctl daemon-reload  # 重载所有修改过的配置文件,扫描新的或有变动的单元
+sudo systemctl restart docker  # 重启docker
 ```
 
 
