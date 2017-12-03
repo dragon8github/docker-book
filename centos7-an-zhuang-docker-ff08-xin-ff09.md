@@ -28,19 +28,19 @@ CE和EE的区别：前者是社区版，免费试用；后者是企业版。需�
 
 为了演示方便，下面的命令 前面一律要加sudo
 
-> yum install -y yum-utilsdevice-mapper-persistent-data lvm2
+> $ yum install -y yum-utilsdevice-mapper-persistent-data lvm2
 
 为了使用 yum-config-manager 需要先安装一下这个
 
-> yum -y install yum-utils
+> $ yum -y install yum-utils
 
 这一步设置即将安装的是稳定版仓库
 
-> yum-config-manager --add-repo [https://download.docker.com/linux/centos/docker-ce.repo](https://download.docker.com/linux/centos/docker-ce.repo)
+> $ yum-config-manager --add-repo [https://download.docker.com/linux/centos/docker-ce.repo](https://download.docker.com/linux/centos/docker-ce.repo)
 
 这一步是可选的,我们不加（edge月更新仓库, Edge gives you new features every month）
 
-> yum-config-manager --enable docker-ce-edge
+> $ yum-config-manager --enable docker-ce-edge
 
 
 
