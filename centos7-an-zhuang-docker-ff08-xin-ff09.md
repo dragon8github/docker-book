@@ -44,5 +44,21 @@ CE和EE的区别：前者是社区版，免费试用；后者是企业版。需�
 
 > $ yum-config-manager --enable docker-ce-edge
 
+### 正式下载安装
+
+安装之前可以查看所有仓库中所有docker版本
+
+> $ yum list docker-ce--showduplicates\|sort -r
+
+不想选那么默认安装 
+
+> $ yum install docker-ce -y
+
+启动 \(并开机启动\)
+
+> $ systemctl start docker
+>
+> $ systemctl enable docker
+
 
 
