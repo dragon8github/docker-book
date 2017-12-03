@@ -1,4 +1,4 @@
-docker安装时默认创建了docker用户组，将普通用户加入 docker 用户组就可以不使用sudo来操作docker 
+docker安装时默认创建了docker用户组，将普通用户加入 docker 用户组就可以不使用sudo来操作docker
 
 > $ sudo usermod -aG docker root
 
@@ -9,6 +9,16 @@ docker安装时默认创建了docker用户组，将普通用户加入 docker 用
 > $ newgrp - docker
 
 ---
+
+### 内置镜像
+
+你可以理解为很多贴心的老外或国人帮你制作好的环境。你可以直接使用
+
+https://hub.docker.com/
+
+然而由于国情，你根本下载不了。于是我们要配置国内镜像，我们可以用阿里云
+
+https://dev.aliyun.com/search.html
 
 
 
