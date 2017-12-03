@@ -2,7 +2,15 @@
 
 左侧菜单 -&gt; 云服务器ECS -&gt; 左侧内部菜单 -&gt; 实例 -&gt; 右侧服务器列表 -&gt; 管理 -&gt; 左侧内部菜单 -&gt; 本实例安全组 -&gt; 配置规则
 
-![](/assets/1import.png)
+![](/assets/1import.png)譬如我想开通8080端口给外界访问。
+
+1、点击右上角【添加安全组规则】
+
+2、端口范围选择8080/8080，授权对象直接设置为0.0.0.0/0即可
+
+![](/assets/65464import.png)
+
+
 
 ### 修改系统盘配置，譬如我想从Centos6 升级到 centos7
 
@@ -14,7 +22,7 @@
 
 ### xshell 远程登陆
 
-1、首先去xshell的官网下载软件：http://www.netsarang.com/products/xsh\_overview.html
+1、首先去xshell的官网下载软件：[http://www.netsarang.com/products/xsh\_overview.html](http://www.netsarang.com/products/xsh_overview.html)
 
 2、进入实例，查看服务器列表，找到ip地址（公）
 

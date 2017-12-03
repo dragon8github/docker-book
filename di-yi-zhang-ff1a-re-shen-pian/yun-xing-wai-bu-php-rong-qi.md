@@ -87,5 +87,5 @@ run 把我们的镜像放入容器中（只在第一次运行\)
 
 > $ docker ps
 
-
+![](/assets/21331import.png)
 
