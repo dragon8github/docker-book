@@ -8,7 +8,9 @@
 
 2、端口范围选择8080/8080，授权对象直接设置为0.0.0.0/0即可
 
-![](/assets/65464import.png)
+![](/assets/65464import.png)3、防火墙放行8080端口示例
+
+> $ iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
 
 
 
