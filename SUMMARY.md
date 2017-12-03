@@ -4,6 +4,7 @@
 
 * [Docker 到底是什么？](README.md)
 * [centos 7.0 安装 docker](centos-70-an-zhuang-docker.md)
+* [阿里云上购买和配置Centos7](a-li-yun-shang-gou-mai-he-pei-zhi-centos7.md)
 
 ## 扩展阅读
 
