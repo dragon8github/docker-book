@@ -24,9 +24,22 @@ docker安装时默认创建了docker用户组，将普通用户加入 docker 用
 
 ![](/assets/12import.png)
 
-https://cr.console.aliyun.com/\#/accelerator
+[https://cr.console.aliyun.com/\#/accelerator](https://cr.console.aliyun.com/#/accelerator)
 
- ![](/assets/8import.png)
+![](/assets/8import.png)
+
+请注意，每个人的加速器地址都不一样，所以需要根据自己的加速器地址来进行配置。
+
+```
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://这是你的加速器地址.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
 
 
 
