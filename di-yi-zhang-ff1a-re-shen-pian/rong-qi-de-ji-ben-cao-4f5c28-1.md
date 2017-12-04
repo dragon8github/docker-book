@@ -36,9 +36,9 @@
 
 5、删除完容器之后，我们才可以开始删除镜像
 
-> $ docker images  
+> $ docker images
 >
-> $ docker rmi &lt;镜像id&gt;
+> $ docker rmi &lt;IMAGE ID&gt;
 
 ---
 
