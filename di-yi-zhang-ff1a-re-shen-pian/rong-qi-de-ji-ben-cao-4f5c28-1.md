@@ -4,23 +4,23 @@
 
 ---
 
-先删除上节课我们创建的镜像。
+### 容器的概念
 
 > container是images运行时的的状态。docker对于运行过的image都保留一个状态（container），可以使用命令docker ps来查看正在运行的container，对于已经退出的container，则可以使用docker ps -a来查看。 如果你退出了一个container而忘记保存其中的数据，你可以使用docker ps -a来找到对应的运行过的container使用docker commit命令将其保存为image然后运行。
 
-**1、查看所有运行中的镜像**
+**1、查看所有运行中的容器**
 
 > $ docker ps
 
 ![](/assets/2312312321import.png)
 
-**2、停止镜像**
+**2、停止容器**
 
 > $ docker stop &lt;CONTAINER ID&gt;
 
 ![](/assets/676776import.png)
 
-**3、查看所有镜像**
+**3、查看所有容器**
 
 再次使用 `$ docker ps` 发现镜像列表已经空空如也了。难道是镜像被删除了吗？
 
@@ -28,13 +28,15 @@
 
 > $ docker ps -a
 
-![](/assets/32525import.png)4、删除所有镜像
+![](/assets/32525import.png)**4、删除指定的容器**
 
 > $ docker rm &lt;CONTAINER ID&gt;
 
 ![](/assets/100import.png)
 
 ---
+
+### 下载官方的镜像源
 
 先从阿里云docker仓库中搜索Centos，并且找到官方认证的源![](/assets/65223import.png)
 
