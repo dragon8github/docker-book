@@ -34,6 +34,12 @@
 
 ![](/assets/100import.png)
 
+5、删除完容器之后，我们才可以开始删除镜像
+
+> $ docker images  
+>
+> $ docker rmi &lt;镜像id&gt;
+
 ---
 
 ### 下载官方的镜像源
