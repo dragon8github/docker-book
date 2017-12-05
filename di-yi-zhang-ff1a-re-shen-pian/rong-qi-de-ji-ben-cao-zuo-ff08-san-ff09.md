@@ -8,7 +8,25 @@ apache的配置文件存放目录默认在：/etc/httpd/conf/httpd.conf
 >
 > $ cat /etc/httpd/conf/httpd.conf
 
-然后找到 DocumentRoot 关键字，发现站点目录在/var/www/html下
+然后找到 DocumentRoot 关键字，发现站点目录在 /var/www/html 下
 
 ![](/assets/353import.png)
+
+在apache站点目录下新建一个index.html，然后在外部浏览器中访问看看情况
+
+> $ cd /var/www/html
+>
+> $ ls
+>
+> $ echo 123 &gt; index.html
+
+![](/assets/5412import.png)
+
+---
+
+### 通过挂载实现容器和主机间的数据共享
+
+### 
+
+
 
