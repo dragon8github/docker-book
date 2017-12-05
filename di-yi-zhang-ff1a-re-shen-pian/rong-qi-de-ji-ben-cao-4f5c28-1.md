@@ -44,5 +44,11 @@
 
 ### 下载官方的镜像源
 
-先从阿里云docker仓库中搜索Centos，并且找到官方认证的源![](/assets/65223import.png)
+先从阿里云docker仓库中搜索Centos，并且找到官方认证的源![](/assets/65223import.png)下载官方镜像
+
+> $ docker pull centos
+
+由于我们删除了上节课的apache-php，所以只有最新下载的centos镜像了
+
+![](/assets/562342import.png)
 
