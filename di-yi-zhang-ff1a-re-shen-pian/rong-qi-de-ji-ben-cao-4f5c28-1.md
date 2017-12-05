@@ -44,7 +44,7 @@
 
 ### 下载官方的镜像源
 
-先从阿里云docker仓库中搜索Centos，并且找到官方认证的源![](/assets/65223import.png)
+先从阿里云docker仓库中搜索Centos，并且找到官方认证的源![](/assets/65223import.png)默认下载的是我们最新的版本
 
 > $ docker pull centos
 
