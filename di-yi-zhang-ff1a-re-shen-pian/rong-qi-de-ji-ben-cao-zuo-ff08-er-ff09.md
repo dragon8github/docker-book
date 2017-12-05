@@ -54,5 +54,33 @@ docker 对容器的权限有一定的限制规则
 
 总而言之，如果我们尝试之前学到的启动容器方式如
 
+> $ docker run  -d -p 8080:80 --name myhttpd centos:httpd
 
+![](/assets/67342import.png)
+
+这时你会发现根本启动不了。它就是一直处于停止状态。这时我们以交互式方式进入。发现是可以进入的（需要先删除刚刚的容器）
+
+> $ docker run -i -t  -p 8080:80 --name myhttpd centos:httpd
+
+![](/assets/54545544545import.png)我们在容器（centos7）内部查看一下httpd的状态，却发现是没有权限的
+
+![](/assets/56565import.png)
+
+就如我们开头所说，docker 对容器的权限有一定的限制规则。那么怎么给容器加特权呢？
+
+---
+
+### 给容器加特权
+
+给容器加特权,否则交互式方式进入容器无法操作一些譬如修改内核、修改系统参数、甚至启动服务等
+
+> $ docker run --privileged -d -p 8080:80 --name myhttpd centos:httpd /usr/sbin/init
+
+（在启动容器时，执行命令 `/usr/sbin/init`）
+
+![](/assets/1312331123import.png)此时我们发现已经启动成功了。
+
+我们仍然使用浏览器访问一下 ip + 8080端口
+
+![](/assets/6656766import.png)
 
