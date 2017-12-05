@@ -44,11 +44,11 @@ create a mkdir and named it "myweb" then create html file, what every entry some
 >
 > $ echo fuck &gt; index.html
 
-so，we still  run the container just like before time，and this time ,we add some para in the order.
+so，we still  run the container just like before time，but this time ,we add some para in the order.
 
 -v：the left part is our servers path，the right part is in the docker container centos servers path.
 
 > $ docker run --privileged -d -p 8080:80 --name  myhttpd -v /root/myweb:/var/www/html centos:httpd /usr/sbin/init
 
-
+![](/assets/656456465import.png)
 
