@@ -46,7 +46,7 @@ create a folder and named it \_myweb ，\_then create html file, what every entr
 
 so，we still  run the container just like before time，but this time ,we add some para in the order.
 
--v：the left part is our servers path（/root/myweb），the right part is in the docker container centos servers path（/var/www/html）。
+**-v**：the left part is our servers path（/root/myweb），the right part is in the docker container centos servers path（/var/www/html）。
 
 > $ docker run --privileged -d -p 8080:80 --name  myhttpd -v /root/myweb:/var/www/html centos:httpd /usr/sbin/init
 
