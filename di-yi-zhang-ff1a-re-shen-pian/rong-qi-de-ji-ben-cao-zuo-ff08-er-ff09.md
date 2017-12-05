@@ -32,7 +32,7 @@ Dockerfile是由一系列命令和参数构成的脚本，这些命令应用于�
 
 ### docker build 命令
 
-用于读取Dockerfile创建镜像
+用于读取 Dockerfile 创建镜像
 
 > $ docker build -t centos:httpd .
 
