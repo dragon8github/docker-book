@@ -32,7 +32,7 @@ you need to stop and remove the container at first
 >
 > $ docker rm myhttpd
 
-create a folder and named it _myweb ，_then create html file, what every entry something word in that. just like that:
+create a folder and named it \_myweb ，\_then create html file, what every entry something word in that. just like that:
 
 > $ pwd
 >
@@ -50,5 +50,9 @@ so，we still  run the container just like before time，but this time ,we add s
 
 > $ docker run --privileged -d -p 8080:80 --name  myhttpd -v /root/myweb:/var/www/html centos:httpd /usr/sbin/init
 
+review the web again， just like the images.
+
 ![](/assets/656456465import.png)
+
+that's very funning!!!
 
