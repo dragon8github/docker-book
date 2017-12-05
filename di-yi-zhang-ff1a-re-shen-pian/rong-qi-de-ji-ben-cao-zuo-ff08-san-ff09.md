@@ -26,7 +26,7 @@ apache的配置文件存放目录默认在：/etc/httpd/conf/httpd.conf
 
 ### 通过挂载实现容器和主机间的数据共享
 
-you need stop and remove the container
+you need to stop and remove the container at first
 
 > $ docker stop myhttpd
 >
