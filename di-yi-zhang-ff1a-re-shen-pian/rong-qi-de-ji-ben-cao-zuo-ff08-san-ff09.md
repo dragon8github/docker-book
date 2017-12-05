@@ -32,11 +32,11 @@ you need to stop and remove the container at first
 >
 > $ docker rm myhttpd
 
-create a mkdir and named it "myweb" then create html file, what every entry something in that. just like that:
+create a folder and named it _myweb ，_then create html file, what every entry something word in that. just like that:
 
 > $ pwd
 >
-> /
+> /root
 >
 > $ mkdir myweb
 >
@@ -46,7 +46,7 @@ create a mkdir and named it "myweb" then create html file, what every entry some
 
 so，we still  run the container just like before time，but this time ,we add some para in the order.
 
--v：the left part is our servers path，the right part is in the docker container centos servers path.
+-v：the left part is our servers path（/root/myweb），the right part is in the docker container centos servers path（/var/www/html）。
 
 > $ docker run --privileged -d -p 8080:80 --name  myhttpd -v /root/myweb:/var/www/html centos:httpd /usr/sbin/init
 
