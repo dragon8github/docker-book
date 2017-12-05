@@ -56,11 +56,13 @@
 
 ### 和容器进行交互
 
-`$ docker run`命令的几个参数（可以运行 docker run --help 查看更多详细说明）
+`$ docker run`命令的几个参数（可以运行 docker run --help  
+ 查看更多详细说明）
 
 * -i： 打开stdin，用于和容器进行交互，通常与 -t 同时使用；
-*  -t：为容器创建虚拟终端，我们就可以登录终端了通常与 -i 同时使用；
-* --name：  譬如 --name xxxooo: 为容器指定一个名称  。
+* -t：为容器创建虚拟终端，我们就可以登录终端了通常与 -i 同时使用；
+* --name：  譬如 --name xxxooo: 为容器指定一个名称
+  。
 
 输入以下命令我们就可以进入容器内部了。
 
@@ -68,21 +70,9 @@
 
 ![](/assets/342342import.png)按下 CTRL + D 或 输入 “exit” 可以退出容器。
 
-当我们退出容器后，我们使用 `$ docker ps` 发现容器没有在运行。![](/assets/wq5215123import.png)我们可以使用 `$ docker ps -a` 查看全部，并且用 `$ docker start fuck` 重新启动它。
+当我们退出容器后，我们使用 `$ docker ps` 发现容器没有在运行。![](/assets/wq5215123import.png)我们可以使用 `$ docker ps -a` 查看全部，并且用 `$ docker start fuck` 重新启动它。![](/assets/64556import.png)
 
-![](/assets/64556import.png)
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 
 
