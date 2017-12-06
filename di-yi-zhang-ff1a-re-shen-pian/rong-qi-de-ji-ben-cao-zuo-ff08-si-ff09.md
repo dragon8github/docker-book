@@ -91,9 +91,23 @@ CMD /usr/sbin/init
 
 启动成功之后，我们依然访问一下浏览器，发现apache还是正常运行的，这是理所当然的，因为我们的镜像本来就是基于httpd镜像的。
 
+![](/assets/23123123123import.png)
+
+再来看看jdk的情况，我们进入容器内部，查看jdk版本（已经将jdk设置到容器的环境变量中）
+
+> $ docker exec -it myjdk /bin/bash
+>
+> $ java -version
+>
+> java version "9.0.1"
+>
+> Java\(TM\) SE Runtime Environment \(build 9.0.1+11\)
+>
+> Java HotSpot\(TM\) 64-Bit Server VM \(build 9.0.1+11, mixed mode\)
 
 
 
+![](/assets/16735468import.png)
 
 ---
 
