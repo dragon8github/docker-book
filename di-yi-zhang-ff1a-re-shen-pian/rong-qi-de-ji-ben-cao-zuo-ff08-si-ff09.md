@@ -75,11 +75,15 @@ CMD /usr/sbin/init
 
 开始构建镜像
 
->
+> docker build -t centos:jdk .
+
+请注意，最后有一个点（.）哦
+
+![](/assets/141142123import.png)
 
 ---
 
-### 排坑
+### 排坑      
 
 > 1、解压.tar.gz出错gzip: stdin: not in gzip format tar: /Child returned status 1 tar: Error is not recoverable: exiting now
 
