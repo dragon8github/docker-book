@@ -81,9 +81,23 @@ CMD /usr/sbin/init
 
 ![](/assets/141142123import.png)
 
+### 3、运行容器
+
+为了方便演示，已经将上节课所有的容器都删除了，当然你可以不删除，但需要映射其他端口。否则会一样使用80端口是不行的
+
+> docker run --privileged -d -p 8080:80 --name  myjdk -v /root/myweb:/var/www/html centos:jdk
+
+![](/assets/231234342234342import.png)
+
+启动成功之后，我们依然访问一下浏览器，发现apache还是正常运行的，这是理所当然的，因为我们的镜像本来就是基于httpd镜像的。
+
+
+
+
+
 ---
 
-### 排坑      
+### 排坑
 
 > 1、解压.tar.gz出错gzip: stdin: not in gzip format tar: /Child returned status 1 tar: Error is not recoverable: exiting now
 
