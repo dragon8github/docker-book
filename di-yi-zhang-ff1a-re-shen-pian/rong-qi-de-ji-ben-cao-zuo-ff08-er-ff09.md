@@ -23,13 +23,12 @@ Dockerfile是由一系列命令和参数构成的脚本，这些命令应用于�
 * FROM ： 基于现有的镜像来创建（也就是基于`$ docker images`列表中的镜像来创建）
 * RUN ： 在容器中运行的语句。下面我们将在容器中下载Apche（httpd），并且设置为服务启动项
 
-> FROM centos:latest   
->
-> RUN yum -y install httpd
->
-> RUN  systemctl enable httpd.service
->
-> EXPOSE 80
+```js
+FROM centos:latest
+RUN yum -y install httpd
+RUN  systemctl enable httpd.service
+EXPOSE 80
+```
 
 ![](/assets/659659569import.png)
 

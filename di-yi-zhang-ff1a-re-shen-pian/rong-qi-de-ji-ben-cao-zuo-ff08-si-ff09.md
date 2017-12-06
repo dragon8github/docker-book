@@ -46,21 +46,36 @@
 
 在真实开发时，我们搭建流程中也是这样的，先有一个纯净（centos），再做一些基本工作（添加httpd、jdk、redis之类）。
 
-然后再一次叠加叠层。实战的镜像就是这样一步一步的搭建起来的。
+然后再一次叠加叠层。实战的镜像就是这样一步一步的搭建起来的。这样我们既拥有一些高级的镜像，也拥有一些底层的镜像。
 
 ![](/assets/34345345import.png)
 
-新建Dockerfile
+新建 build-jdk 文件夹和 Dockerfile 文件，并且将 jdk-9.0.1 复制一份到其中
 
-> FROM centos:httpd  COPY jdk-9.0.1 /usr/local/jdk-9.0.1
+> $ mkdir build-jdk
 >
-> ENV JAVA\_HOME=/usr/local/jdk-9.0.1
+> $ cp -r /usr/local/jdk-9.0.1 /root/build-jdk
 >
-> ENV PATH $JAVA\_HOME/bin:$PATH
+> $ vim Dockerfile
+
+![](/assets/45346import.png)
+
+**请注意，这里的jdk-9.0.1 是在当前目录下的，也就是和Dockerfile文件同目录**
+
+* COPY：将本地的内容拷贝进镜像指定文件夹中；
+* ENV：设置容器的环境变量；
+
+```js
+FROM centos:httpd  COPY jdk-9.0.1 /usr/local/jdk-9.0.1
+ENV JAVA_HOME=/usr/local/jdk-9.0.1
+ENV PATH $JAVA_HOME/bin:$PATH
+ENV CLASSPATH .:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+CMD /usr/sbin/init
+```
+
+开始构建镜像
+
 >
-> ENV CLASSPATH .:$JAVA\_HOME/lib/dt.jar:$JAVA\_HOME/lib/tools.jar
->
-> CMD /usr/sbin/init
 
 ---
 
