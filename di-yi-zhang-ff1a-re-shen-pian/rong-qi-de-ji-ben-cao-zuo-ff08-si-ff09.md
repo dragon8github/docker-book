@@ -42,11 +42,25 @@
 
 ### 2、创建 Dockerfile
 
-本节课我们将创造的镜像，是基于上节课httpd镜像（而该镜像也是基于 centos）
+本节课我们将创造的镜像，是基于上节课centos:httpd镜像（该镜像也是基于 centos 官方镜像搭建）
 
-事实上在我们正常的搭建流程中也是这样，镜像是一步一步的搭建起来的。
+在真实开发时，我们搭建流程中也是这样的，先有一个纯净（centos），再做一些基本工作（添加httpd、jdk、redis之类）。
+
+再进行个性化的处理。实战的镜像就是这样一步一步的搭建起来的。
 
 ![](/assets/34345345import.png)
+
+新建Dockerfile
+
+> FROM centos:httpd  COPY jdk-9.0.1 /usr/local/jdk-9.0.1
+>
+> ENV JAVA\_HOME=/usr/local/jdk-9.0.1
+>
+> ENV PATH $JAVA\_HOME/bin:$PATH
+>
+> ENV CLASSPATH .:$JAVA\_HOME/lib/dt.jar:$JAVA\_HOME/lib/tools.jar
+>
+> CMD /usr/sbin/init
 
 ---
 
