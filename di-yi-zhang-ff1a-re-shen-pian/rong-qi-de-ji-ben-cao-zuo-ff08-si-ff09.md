@@ -16,9 +16,37 @@
 
 ### ![](/assets/123123123.png)
 
+下载完成后，使用tar命令解压
+
+> $ tar zxvf &lt;.tar.gz压缩文件&gt;
+
+![](/assets/1212123123import.png)
+
+
+
+将jdk-9.0.1放置在/usr/local下（规范），然后我们将jdk配置到环境变量中去。
+
+> $ mv jdk-9.0.1 /usr/local
+>
+> $ vim /etc/profile
+
+修改 /etc/profile ，加入以下内容
+
+> export JAVA\_HOME=/usr/local/jdk-9.0.1
+>
+> export PATH=$JAVA\_HOME/bin:$PATH
+>
+> export CLASSPATH=.:$JAVA\_HOME/lib/dt.jar:$JAVA\_HOME/lib/tools.jar
+
+让 /etc/profile 立即生效
+
+> $ . /etc/profile
+
+
+
+
+
 ### 2、创建 Dockerfile
-
-
 
 ---
 
