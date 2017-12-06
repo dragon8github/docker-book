@@ -22,8 +22,6 @@
 
 ![](/assets/1212123123import.png)
 
-
-
 将jdk-9.0.1放置在/usr/local下（规范），然后我们将jdk配置到环境变量中去。
 
 > $ mv jdk-9.0.1 /usr/local
@@ -42,11 +40,11 @@
 
 > $ . /etc/profile
 
-
-
-
-
 ### 2、创建 Dockerfile
+
+本节课创造的镜像，是基于上节课httpd镜像（而该镜像也是基于 centos），事实上在我们正常的搭建流程中也是这样，镜像是一步一步的搭建起来的。
+
+![](/assets/34345345import.png)
 
 ---
 
