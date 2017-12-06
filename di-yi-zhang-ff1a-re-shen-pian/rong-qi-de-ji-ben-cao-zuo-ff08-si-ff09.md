@@ -89,7 +89,9 @@ CMD /usr/sbin/init
 
 ![](/assets/231234342234342import.png)
 
-启动成功之后，我们依然访问一下浏览器，发现apache还是正常运行的，这是理所当然的，因为我们的镜像本来就是基于httpd镜像的。
+启动成功之后，我们依然访问一下浏览器，发现apache还是正常运行的。
+
+这是理所当然的，因为我们的镜像本来就是基于httpd镜像的。
 
 ![](/assets/23123123123import.png)
 
@@ -104,8 +106,6 @@ CMD /usr/sbin/init
 > Java\(TM\) SE Runtime Environment \(build 9.0.1+11\)
 >
 > Java HotSpot\(TM\) 64-Bit Server VM \(build 9.0.1+11, mixed mode\)
-
-
 
 ![](/assets/16735468import.png)
 
