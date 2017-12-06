@@ -66,7 +66,8 @@
 * ENV：设置容器的环境变量；
 
 ```js
-FROM centos:httpd  COPY jdk-9.0.1 /usr/local/jdk-9.0.1
+FROM centos:httpd 
+COPY ./jdk-9.0.1 /usr/local/jdk-9.0.1
 ENV JAVA_HOME=/usr/local/jdk-9.0.1
 ENV PATH $JAVA_HOME/bin:$PATH
 ENV CLASSPATH .:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
