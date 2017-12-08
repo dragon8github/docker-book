@@ -24,11 +24,9 @@ github地址：
 
 > $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data --name mydocker portainer/portainer
 
-
-
 ![](/assets/11616import.png)
 
-### 4、访问![](/assets/114123import.png)
+4、访问![](/assets/114123import.png)
 
-
+该界面是让你创建一个账号，密码必须是8位即可
 
