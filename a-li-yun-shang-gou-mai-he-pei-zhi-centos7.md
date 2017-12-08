@@ -8,9 +8,15 @@
 
 2、端口范围选择8080/8080，授权对象直接设置为 0.0.0.0/0 即可
 
-![](/assets/65464import.png)3、防火墙放行8080端口示例
+##### ![](/assets/65464import.png)
+
+##### 3、服务器防火墙放行8080端口示例
 
 > $ iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+
+
+
+
 
 ### 修改系统盘配置，譬如我想从Centos6 升级到 Centos7
 
