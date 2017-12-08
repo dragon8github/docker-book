@@ -12,11 +12,13 @@ github地址：
 
 > $ docker pull portainer/portainer
 
+### 
+
 ### 2、设置9000端口放行
 
 > $ iptables -I INPUT -p tcp --dport 9000 -j ACCEPT
 
-随便设置一下阿里云安全组配置
+顺便设置一下阿里云安全组配置
 
 ![](/assets/12312312123import.png)
 
