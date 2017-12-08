@@ -26,7 +26,7 @@ github地址：
 
 ![](/assets/11616import.png)
 
-4、访问![](/assets/114123import.png)
+### 4、访问![](/assets/114123import.png)
 
 该界面是让你创建一个账号，密码必须是8位即可
 
