@@ -44,14 +44,15 @@ $ ps -ef | grep docker
 
 ### python 连接 Docker 尝试
 
-官网推荐了pthon版本和Go版本的。我们使用python，比较简单。
+官网推荐了pthon版本和Go版本、HTTP方式的。我们使用python，比较简单。
 
-> https://docs.docker.com/develop/sdk/\#python-sdk
+> [https://docs.docker.com/develop/sdk/\#python-sdk](https://docs.docker.com/develop/sdk/#python-sdk)
 
-使用 pip 安装 python使用 docker 必备的插件，当然首先要确定你安装了pip
+使用 pip 安装 python使用 docker 必备的插件，当然首先要确定你安装了pip.
 
 ```bash
 $ python -m pip help
+$ python -m pip install --upgrade pip
 $ python -m pip install docker -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 ```
 
