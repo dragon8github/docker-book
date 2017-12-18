@@ -28,11 +28,9 @@ ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock
 
 ---
 
-查看是否正常配置并且开启
+### 查看是否正常配置并且正常开启
 
 > ps -ef \| grep docker
 
 ![](/assets/231231251323import.png)
-
-
 
