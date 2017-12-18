@@ -20,9 +20,19 @@ ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock
 
 ### 重启 Docker Service 使配置生效
 
+第一步是让守护进程重新装载。第二步是重启服务
+
 > $ systemctl daemon-reload
+>
+> $ systemctl restart docker
 
 ---
+
+查看是否正常配置并且开启
+
+> ps -ef \| grep docker
+
+![](/assets/231231251323import.png)
 
 
 
