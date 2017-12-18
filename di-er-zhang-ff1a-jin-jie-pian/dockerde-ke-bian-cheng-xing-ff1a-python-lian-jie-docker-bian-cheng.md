@@ -46,7 +46,7 @@ $ ps -ef | grep docker
 
 官网推荐了pthon版本和Go版本的。我们使用python，比较简单。
 
-> [https://docs.docker.com/develop/sdk/](https://docs.docker.com/develop/sdk/)
+> https://docs.docker.com/develop/sdk/\#python-sdk
 
 使用 pip 安装 python使用 docker 必备的插件，当然首先要确定你安装了pip
 
