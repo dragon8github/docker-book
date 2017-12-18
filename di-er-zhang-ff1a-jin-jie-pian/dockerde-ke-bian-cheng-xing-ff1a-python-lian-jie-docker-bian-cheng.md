@@ -68,7 +68,7 @@ $ python -m pip install docker -i http://mirrors.aliyun.com/pypi/simple/ --trust
 
 ---
 
-2、修改阿里云安全组配置。添加2375端口访问权
+2、如果docker是部署在阿里云服务器中，那么添加阿里云安全组配置。添加2375端口访问权。
 
 ![](/assets/1243263467import.png)
 
@@ -88,7 +88,7 @@ $ iptables -I INPUT -p tcp --dport 2375 -j ACCEPT
 import docker
 
 # iptables -I INPUT -p tcp --dport 2375 -j ACCEPT  确保防火墙放行2375端口 
-# 如果docker是阿里云，切记必须将安全组规则开启2375端口的访问
+# 如果docker是部署在阿里云服务器中，切记必须将安全组规则开启2375端口的访问
 client = docker.DockerClient(base_url='tcp://119.23.111.13:2375')
 images=client.images.list()
 print(images)
