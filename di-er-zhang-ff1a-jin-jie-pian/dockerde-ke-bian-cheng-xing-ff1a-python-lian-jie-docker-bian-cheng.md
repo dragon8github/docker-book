@@ -56,5 +56,7 @@ $ python -m pip install --upgrade pip
 $ python -m pip install docker -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 ```
 
+测试一下是否能正常引入docker，没有报错就是成功。
 
+![](/assets/123135134134import.png)
 
