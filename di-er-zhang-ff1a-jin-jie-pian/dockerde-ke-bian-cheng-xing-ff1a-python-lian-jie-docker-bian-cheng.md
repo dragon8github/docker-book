@@ -48,9 +48,13 @@ $ ps -ef | grep docker
 
 > [https://docs.docker.com/develop/sdk/\#python-sdk](https://docs.docker.com/develop/sdk/#python-sdk)
 >
-> https://docs.docker.com/develop/sdk/examples/
+> [https://docs.docker.com/develop/sdk/examples/](https://docs.docker.com/develop/sdk/examples/)
 
-使用 pip 安装 python使用 docker 必备的插件，当然首先要确定你安装了pip.
+1、使用 pip 安装 python使用 docker 必备的插件，当然首先要确定你安装了pip.
+
+第一命令是检查你的python是否自带pip（python某个版本开始，已经自带pip了。如果没有请自己扩展下载）
+
+第二命令是从阿里云镜像库中下载我们的 python docker 模块
 
 ```bash
 $ python -m pip help
@@ -64,21 +68,21 @@ $ python -m pip install docker -i http://mirrors.aliyun.com/pypi/simple/ --trust
 
 ---
 
-修改阿里云安全组配置。添加2375端口访问权
+2、修改阿里云安全组配置。添加2375端口访问权
 
 ![](/assets/1243263467import.png)
 
 ---
 
-防火墙开启2375端口访问
+3、防火墙开启2375端口访问
 
 ```bash
-$ iptables -I INPUT -p tcp --dport 2375 -j ACCEPT 
+$ iptables -I INPUT -p tcp --dport 2375 -j ACCEPT
 ```
 
 ---
 
-python代码编写
+4、python代码编写
 
 ```py
 import docker
@@ -90,5 +94,7 @@ images=client.images.list()
 print(images)
 ```
 
+成功打印出我们docker所有的容器内容！！
 
+![](/assets/123124637467import.png)
 
