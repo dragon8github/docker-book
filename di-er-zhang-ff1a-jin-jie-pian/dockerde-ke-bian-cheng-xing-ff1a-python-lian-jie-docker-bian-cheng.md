@@ -34,3 +34,5 @@ ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock
 
 ![](/assets/231231251323import.png)
 
+这样一来，我们就可以使用TCP的方式连接Docker了。
+
