@@ -78,5 +78,11 @@ $ docker commit -c 'CMD ["/usr/sbin/init"] ' -c "EXPOSE 80" tmp centos:nginx
 $ docker stop tmp && docker rm tmp
 ```
 
+启动 nginx 镜像，将主机中的nginx/conf/nginx.conf文件映射到容器中。这也是之前章节的知识点了
 
+```
+$ docker run --name mynginx --privileged -p 9090:80 -v /root/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -d centos:nginx
+```
+
+---
 
