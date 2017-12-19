@@ -86,3 +86,11 @@ $ docker run --name mynginx --privileged -p 9090:80 -v /root/nginx/conf/nginx.co
 
 ![](/assets/1649534524import.png)
 
+测试配置是否正常
+
+```
+$ curl http://localhost:9090
+```
+
+![](/assets/146457568768import.png)
+
