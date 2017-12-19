@@ -76,6 +76,8 @@ Name随意设置。譬如就叫mysql。然后点击“Show advanced options”
 
 但是，默认的启动方式有点问题。我们需要先删除掉这个容器，重新启动，并且按照mysql官方推荐的做法来启动。
 
+![](/assets/12312415345import.png)
+
 [https://hub.docker.com/\_/mysql/](https://hub.docker.com/_/mysql/)
 
 > $ docker stop mysql && docker rm mysql
