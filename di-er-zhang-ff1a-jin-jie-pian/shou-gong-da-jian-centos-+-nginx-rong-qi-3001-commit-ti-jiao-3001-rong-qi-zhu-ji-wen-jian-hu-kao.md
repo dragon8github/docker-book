@@ -33,5 +33,20 @@ $  curl http://localhost:80
 
 ---
 
+### 保存容器 / 提交镜像
+
+https://docs.docker.com/engine/reference/commandline/commit/\#description
+
+用到命令：`$ docker commit`
+
+我们还需要一些额外参数，事实上这些参数是之前的章节 Dockerfile 使用的配置。但现在我们也可以通过 Commit 的方式来创建。
+
+* CMD：默认启动容器使用的命令
+* EXPOSE: 暴漏的端口
+
+```
+$ docker commit -c 'CMD ["/usr/sbin/init"] ' -c "EXPOSE 80" tmp centos:nginx
+```
+
 
 
