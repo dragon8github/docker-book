@@ -54,18 +54,28 @@ $ docker commit -c 'CMD ["/usr/sbin/init"] ' -c "EXPOSE 80" tmp centos:nginx
 
 ---
 
-### 将容器中的文件拷贝到主机 / 将主机中的文件拷贝到容器
+### 将容器中的文件拷贝到主机
 
-https://docs.docker.com/engine/reference/commandline/cp/
+[https://docs.docker.com/engine/reference/commandline/cp/](https://docs.docker.com/engine/reference/commandline/cp/)
 
 > $ docker cp
 
-1、将容器中的文件拷贝到主机
+将容器中的文件拷贝到主机
 
 ```bash
  $ mkdir /root/nginx && /root/nginx/conf
  $ docker cp tmp:/etc/nginx/nginx.conf /root/nginx/conf/
  $ cat /root/nginx/conf/nginx.conf
+```
+
+---
+
+### 启动 nginx 镜像，将主机中的文件映射到容器中
+
+我们可以删除临时的容器tmp了。因为之前我们已经保存好镜像了。
+
+```
+$ docker stop tmp && docker rm tmp
 ```
 
 
