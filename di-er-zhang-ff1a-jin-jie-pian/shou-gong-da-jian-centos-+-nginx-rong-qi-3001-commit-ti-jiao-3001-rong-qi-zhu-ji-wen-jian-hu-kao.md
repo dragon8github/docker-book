@@ -50,5 +50,5 @@ $  curl http://localhost:80
 $ docker commit -c 'CMD ["/usr/sbin/init"] ' -c "EXPOSE 80" tmp centos:nginx
 ```
 
-
+![](/assets/123123123123123123123import.png)
 
