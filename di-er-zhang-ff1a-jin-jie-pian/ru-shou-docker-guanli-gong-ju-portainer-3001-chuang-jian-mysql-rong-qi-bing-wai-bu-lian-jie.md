@@ -42,7 +42,7 @@ github地址：
 
 Name 可以随意设置一个用户名，譬如我设置 Lee
 
-Endpoint URL 必须设置上节课开通的TCP链接和端口，如：119.23.111.13:2375 
+Endpoint URL 必须设置上节课开通的TCP链接和端口，如：119.23.111.13:2375
 
 尝试前，请确保上一节课能正常跑通。
 
@@ -51,4 +51,26 @@ Endpoint URL 必须设置上节课开通的TCP链接和端口，如：119.23.111
 ---
 
 连接成功之后就进入我们的后台了![](/assets/23123123123123import.png)
+
+---
+
+### 使用管理工具下载mysql
+
+选择左侧的“App Template”。选择mysql
+
+![](/assets/23123123import.png)
+
+Name随意设置。譬如就叫mysql。然后点击“Show advanced options”
+
+这里可以设置端口和映射端口，mysql的端口默认是3306，我们设置为3307吧。
+
+之后点击"Deploy the container"即可
+
+![](/assets/135134import.png)
+
+等待一段时间。然后跳转到Container界面，我们发现多了一个mysql 的容器
+
+![](/assets/123123123123123151import.png)
+
+
 
