@@ -46,7 +46,7 @@ $  curl http://localhost:80
 * CMD：默认启动容器使用的命令
 * EXPOSE: 暴漏的端口
 
-```
+```bash
 $ docker commit -c 'CMD ["/usr/sbin/init"] ' -c "EXPOSE 80" tmp centos:nginx
 ```
 
