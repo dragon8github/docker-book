@@ -42,7 +42,7 @@
 
 **6、启动容器，当容器停止时可以使用**
 
-> $ docker -ai start &lt;containerID&gt;
+> $ docker start &lt;containerID&gt;
 
 ---
 
@@ -71,9 +71,11 @@
 
 > $ docker run -i -t --name fuck centos
 
-![](/assets/342342import.png)按下 CTRL + D 或 输入 “exit” 可以退出容器。
+![](/assets/342342import.png)**按下 CTRL + D 或 输入 “exit” 可以退出容器。**
 
-当我们退出容器后，我们使用 `$ docker ps` 发现容器没有在运行。![](/assets/wq5215123import.png)我们可以使用 `$ docker ps -a` 查看全部，并且用 `$ docker start fuck` 重新启动它。![](/assets/64556import.png)
+当我们退出容器后，我们使用 `$ docker ps` 发现容器没有在运行列表中。难道他被消灭了吗？NO！只是停止了![](/assets/wq5215123import.png)
+
+我们可以使用 `$ docker ps -a` 查看全部容器，并且用 `$ docker start fuck` 重新启动它。![](/assets/64556import.png)
 
 ---
 
