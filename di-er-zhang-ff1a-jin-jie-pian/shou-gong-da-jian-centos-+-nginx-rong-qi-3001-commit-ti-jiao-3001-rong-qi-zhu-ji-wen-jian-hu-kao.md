@@ -14,7 +14,7 @@ $ docker run -it --privileged --name tmp centos /usr/sbin/init
 
 ---
 
-### 安装 Nginx
+### 手工进入容器安装 Nginx
 
 ```
 $ rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
@@ -33,7 +33,7 @@ $  curl http://localhost:80
 
 ---
 
-### 保存容器 / 提交镜像
+### 保存镜像 / 提交镜像
 
 [https://docs.docker.com/engine/reference/commandline/commit/\#description](https://docs.docker.com/engine/reference/commandline/commit/#description)
 
@@ -51,4 +51,8 @@ $ docker commit -c 'CMD ["/usr/sbin/init"] ' -c "EXPOSE 80" tmp centos:nginx
 ```
 
 ![](/assets/123123123123123123123import.png)
+
+---
+
+
 
