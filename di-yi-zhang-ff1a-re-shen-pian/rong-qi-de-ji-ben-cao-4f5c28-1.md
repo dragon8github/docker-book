@@ -40,8 +40,6 @@
 >
 > $ docker rmi &lt;IMAGE ID&gt;
 
-
-
 **6、启动容器，当容器停止时可以使用**
 
 > $ docker -ai start &lt;containerID&gt;
@@ -67,8 +65,7 @@
 
 * -i： 打开stdin，用于和容器进行交互，通常与 -t 同时使用；
 * -t：为容器创建虚拟终端，我们就可以登录终端了通常与 -i 同时使用；
-* --name：  譬如 --name xxxooo: 为容器指定一个名称
-  。
+* --name：  譬如 --name xxxooo: 为容器指定一个名称。
 
 输入以下命令我们就可以进入容器内部了。
 
