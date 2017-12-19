@@ -40,6 +40,12 @@
 >
 > $ docker rmi &lt;IMAGE ID&gt;
 
+
+
+**6、启动容器，当容器停止时可以使用**
+
+> $ docker -ai start &lt;containerID&gt;
+
 ---
 
 ### 下载官方的镜像源
