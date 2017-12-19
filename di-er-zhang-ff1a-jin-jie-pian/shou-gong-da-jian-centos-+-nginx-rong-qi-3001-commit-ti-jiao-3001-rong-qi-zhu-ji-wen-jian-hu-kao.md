@@ -84,5 +84,5 @@ $ docker stop tmp && docker rm tmp
 $ docker run --name mynginx --privileged -p 9090:80 -v /root/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -d centos:nginx
 ```
 
----
+![](/assets/1649534524import.png)
 
