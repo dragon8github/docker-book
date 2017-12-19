@@ -23,10 +23,10 @@ $ systemctl enable nginx
 $ systemctl start nginx
 ```
 
-测试是否安装成功
+测试是否安装成功（Nginx默认安装是80端口，且没有其他端口占据，所以这里应该是正常的）
 
 ```
-$  curl http://localhost:80 
+$  curl http://localhost:80
 ```
 
 ![](/assets/L@KWO]3_JC~N%28]ENUNWU_%28S.png)
