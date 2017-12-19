@@ -76,7 +76,7 @@ Name随意设置。譬如就叫mysql。然后点击“Show advanced options”
 
 但是，默认的启动方式有点问题。我们需要先删除掉这个容器，重新启动，并且按照mysql官方推荐的做法来启动。
 
-https://hub.docker.com/\_/mysql/
+[https://hub.docker.com/\_/mysql/](https://hub.docker.com/_/mysql/)
 
 > $ docker stop mysql && docker rm mysql
 
@@ -88,7 +88,7 @@ https://hub.docker.com/\_/mysql/
 $ docker run --name mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=123 -d mysql
 ```
 
-之后就可以正常连接了。
+之后就可以正常连接了。（如果是阿里云，请务必去设置好安全组，添加开放3307端口）
 
 ![](/assets/爱上112312312312import.png)
 
