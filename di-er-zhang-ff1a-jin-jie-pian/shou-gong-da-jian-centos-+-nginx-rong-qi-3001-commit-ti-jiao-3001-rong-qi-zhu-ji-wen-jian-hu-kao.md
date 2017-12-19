@@ -94,3 +94,11 @@ $ curl http://localhost:9090
 
 ![](/assets/146457568768import.png)
 
+
+
+先配置一下阿里云的9090安全组。然后就可以在外部访问了
+
+![](/assets/121363575678import.png)
+
+![](/assets/312312213231123import.png)
+
