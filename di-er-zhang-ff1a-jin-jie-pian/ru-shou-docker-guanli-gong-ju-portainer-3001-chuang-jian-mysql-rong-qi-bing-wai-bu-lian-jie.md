@@ -68,9 +68,27 @@ Name随意设置。譬如就叫mysql。然后点击“Show advanced options”
 
 ![](/assets/135134import.png)
 
-等待一段时间。然后跳转到Container界面，我们发现多了一个mysql 的容器
+等待一段时间。然后跳转到Container界面，我们发现多了一个mysql 的容器。并且默认帮我们启动了
 
 ![](/assets/123123123123123151import.png)
 
+---
 
+但是，默认的启动方式有点问题。我们需要先删除掉这个容器，重新启动，并且按照mysql官方推荐的做法来启动。
+
+https://hub.docker.com/\_/mysql/
+
+> $ docker stop mysql && docker rm mysql
+
+![](/assets/15123123123import.png)
+
+然后再运行这段代码，并且可以设置密码
+
+```
+$ docker run --name mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=123 -d mysql
+```
+
+之后就可以正常连接了。
+
+![](/assets/爱上112312312312import.png)
 
