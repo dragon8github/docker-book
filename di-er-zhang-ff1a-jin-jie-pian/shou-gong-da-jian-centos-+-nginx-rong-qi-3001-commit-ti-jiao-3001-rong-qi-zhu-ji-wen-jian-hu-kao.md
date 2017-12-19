@@ -39,7 +39,9 @@ $  curl http://localhost:80
 
 用到命令：`$ docker commit`
 
-我们还需要 -c 参数，该参数使用的内容是之前的章节 Dockerfile 使用的配置。但现在我们也可以通过 Commit 的方式来创建。
+另外我们需要使用一个重要的参数 -c ，该参数使用的内容，和之前的章节 Dockerfile 使用的配置一样。
+
+但现在我们也可以通过 Commit -c 的方式来配置创建了。
 
 * CMD：默认启动容器使用的命令
 * EXPOSE: 暴漏的端口
