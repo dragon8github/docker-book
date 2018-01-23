@@ -28,21 +28,31 @@
 
 > $ docker ps -a
 
-![](/assets/32525import.png)**4、删除指定的容器**
+![](/assets/32525import.png)
+
+**4、删除指定的容器**
 
 > $ docker rm &lt;CONTAINER ID&gt;
 
 ![](/assets/100import.png)
 
-**5、删除完容器之后，我们才可以开始删除镜像**
-
-> $ docker images
->
-> $ docker rmi &lt;IMAGE ID&gt;
-
-**6、启动容器，当容器停止时可以使用**
+5**、启动容器，当停止的容器需要重新启动时**
 
 > $ docker start &lt;containerID&gt;
+
+
+
+### 镜像的概念
+
+1**、查看所有的镜像源**
+
+> $ $ docker images
+
+2、**删除镜像，只有当所有基于该镜像的容器被删除之后，才可以删除该镜像**
+
+> $ docker rmi &lt;IMAGE ID&gt;
+
+
 
 ---
 
