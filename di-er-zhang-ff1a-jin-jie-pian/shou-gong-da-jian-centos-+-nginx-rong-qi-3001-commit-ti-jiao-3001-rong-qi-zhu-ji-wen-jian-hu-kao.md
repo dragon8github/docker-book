@@ -64,25 +64,23 @@ $ docker commit -c 'CMD ["/usr/sbin/init"] ' -c "EXPOSE 80" tmp centos:nginx
 
 我们将 tmp 容器中 nginx 配置文件拷贝到本机中
 
-> $ mkdir -p /root/nginx/conf 
+> $ mkdir -p /root/nginx/conf
 >
-> **$ docker cp tmp:/etc/nginx/nginx.conf   /root/nginx/conf/**
+> $ docker cp tmp:/etc/nginx/nginx.conf   /root/nginx/conf/
+
+我们可以删除临时的容器tmp了。因为之前我们已经保存好镜像，也保存好nginx的配置文件了。一切准备就绪，卸磨杀驴吧！
+
+> $ docker stop tmp && docker rm tmp
 
 ---
 
 ### 启动 nginx 镜像，将主机中的文件映射到容器中
 
-我们可以删除临时的容器tmp了。因为之前我们已经保存好镜像了。
-
-```
-$ docker stop tmp && docker rm tmp
-```
-
 启动 nginx 镜像，将主机中的nginx/conf/nginx.conf文件映射到容器中。这也是之前章节的知识点了
 
-```
-$ docker run --name mynginx --privileged -p 9090:80 -v /root/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -d centos:nginx
-```
+> $ docker run --name mynginx --privileged -p 9090:80 -v /root/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -d centos:nginx
+
+同理，我们也可以将网站资源的目录（WWW）映射到容器中
 
 ![](/assets/1649534524import.png)
 
