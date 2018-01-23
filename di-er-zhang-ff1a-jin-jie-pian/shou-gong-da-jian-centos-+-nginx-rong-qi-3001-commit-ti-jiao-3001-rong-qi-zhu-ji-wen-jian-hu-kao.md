@@ -6,6 +6,8 @@
 $ docker run -it --privileged --name tmp centos /usr/sbin/init
 ```
 
+![](/assets/axczxaddgfgimport.png)
+
 界面会卡死，但无所谓。我们新开一个xshell窗口。
 
 然后使用exec进行操作。利用交互式方式进入后再安装。
@@ -33,7 +35,7 @@ $  curl http://localhost:80
 
 ---
 
-### 保存镜像 / 提交镜像
+### 保存镜像 / 提交镜像 / 制作镜像
 
 [https://docs.docker.com/engine/reference/commandline/commit/\#description](https://docs.docker.com/engine/reference/commandline/commit/#description)
 
@@ -50,7 +52,7 @@ $  curl http://localhost:80
 $ docker commit -c 'CMD ["/usr/sbin/init"] ' -c "EXPOSE 80" tmp centos:nginx
 ```
 
-![](/assets/123123123123123123123import.png)
+制作完成![](/assets/azxvxcvcsadsdfimport.png)
 
 ---
 
@@ -94,11 +96,7 @@ $ curl http://localhost:9090
 
 ![](/assets/146457568768import.png)
 
-
-
 如果服务器部署在阿里云. 需要先配置一下阿里云的安全组。添加9090端口对外，然后就可以在外部访问了
-
-
 
 ![](/assets/121363575678import.png)
 
