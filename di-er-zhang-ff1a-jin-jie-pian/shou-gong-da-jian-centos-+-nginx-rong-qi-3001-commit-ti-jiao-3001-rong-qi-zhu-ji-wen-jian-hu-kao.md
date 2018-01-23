@@ -62,13 +62,11 @@ $ docker commit -c 'CMD ["/usr/sbin/init"] ' -c "EXPOSE 80" tmp centos:nginx
 
 > $ docker cp
 
-将容器中的文件拷贝到主机
+我们将 tmp 容器中 nginx 配置文件拷贝到本机中
 
-```bash
- $ mkdir /root/nginx && /root/nginx/conf
- $ docker cp tmp:/etc/nginx/nginx.conf /root/nginx/conf/
- $ cat /root/nginx/conf/nginx.conf
-```
+> $ mkdir -p /root/nginx/conf 
+>
+> **$ docker cp tmp:/etc/nginx/nginx.conf   /root/nginx/conf/**
 
 ---
 
