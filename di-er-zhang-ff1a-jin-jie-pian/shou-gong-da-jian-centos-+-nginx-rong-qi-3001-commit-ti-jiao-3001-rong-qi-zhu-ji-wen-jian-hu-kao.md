@@ -25,7 +25,7 @@ $ systemctl enable nginx
 $ systemctl start nginx
 ```
 
-测试是否安装成功（Nginx默认安装是80端口，且没有其他端口占据，所以这里应该是正常的）
+测试是否安装成功（Nginx默认安装是80端口，默认网站目录在 /usr/share/nginx/html/）
 
 ```
 $  curl http://localhost:80
@@ -74,13 +74,15 @@ $ docker commit -c 'CMD ["/usr/sbin/init"] ' -c "EXPOSE 80" tmp centos:nginx
 
 ---
 
-### 启动 nginx 镜像，将主机中的文件映射到容器中
+### 启动 nginx 镜像，将主机中的文件映射（替换）到容器中
 
-启动 nginx 镜像，将主机中的nginx/conf/nginx.conf文件映射到容器中。这也是之前章节的知识点了
+启动 nginx 镜像，将主机中的nginx/conf/nginx.conf文件映射（替换）到容器中。这也是之前章节的知识点了
 
 > $ docker run --name mynginx --privileged -p 9090:80 -v /root/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -d centos:nginx
 
-同理，我们也可以将网站资源的目录（WWW）映射到容器中
+同理，我们也可以将本机的目录（/root/nginx/www/）映射（替换）到容器的Nginx网站目录（/usr/share/nginx/html/）中
+
+> $ docker run --name mynginx --privileged -p 9090:80 -v /root/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /root/nginx/www/:/usr/share/nginx/html/ -d centos:nginx
 
 ![](/assets/1649534524import.png)
 
