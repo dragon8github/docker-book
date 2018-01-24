@@ -1,6 +1,6 @@
 这节课我们将下载到本地的JDK，拷贝到容器中去。
 
-### 1、下载jdk（Java SE Development Kit）
+#### 1、下载jdk（Java SE Development Kit）
 
 前往java官方下载地址
 
@@ -38,9 +38,9 @@
 
 让 /etc/profile 立即生效
 
-> $ . /etc/profile
+> $  /etc/profile
 
-### 2、创建 Dockerfile
+#### 2、创建 Dockerfile
 
 本节课我们将创造的镜像，是基于上节课centos:httpd镜像（该镜像也是基于 centos 官方镜像搭建）
 
@@ -82,7 +82,7 @@ CMD /usr/sbin/init
 
 ![](/assets/141142123import.png)
 
-### 3、运行容器
+#### 3、运行容器
 
 为了方便演示，已经将上节课所有的容器都删除了，当然你可以不删除，但需要映射其他端口。否则会一样使用80端口是不行的
 
