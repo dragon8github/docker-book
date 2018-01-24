@@ -4,7 +4,7 @@
 
 > [https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
 
-### 🏊 安装 
+### 🏊 安装
 
 > $ sudo curl -L [https://github.com/docker/compose/releases/download/1.18.0/docker-compose-\`uname](https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname) -s\`-\`uname -m\` -o /usr/local/bin/docker-compose
 
@@ -41,10 +41,10 @@
 2、创建一个docker-compose.yml 文件,拷贝如下内容
 
 ```js
-ervices: 
+services: 
   web1: 
     container_name: web1
-    image:"centos:jdk"
+    image: "centos:jdk"
     ports: 
       - "8080:80"
     privileged: true
