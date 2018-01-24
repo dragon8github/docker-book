@@ -1,10 +1,8 @@
-### 怎么把我们写好的网站文件塞入容器（以php + apache为例）？
+### 手动在进入容器，在apache中新建一个测试页面
 
-apache的配置文件存放目录默认在：/etc/httpd/conf/httpd.conf
+我们先进入容器内部，然后打开apache配置文件。apache的配置文件存放目录默认在：/etc/httpd/conf/httpd.conf
 
-我们先进入容器内部，然后打开该配置文件夹。
-
-> $ docker exiec -i -t myhttpd /bin/bash
+> $ docker exec -i -t myhttpd /bin/bash
 >
 > $ cat /etc/httpd/conf/httpd.conf
 
@@ -24,7 +22,11 @@ apache的配置文件存放目录默认在：/etc/httpd/conf/httpd.conf
 
 ---
 
-### 通过挂载实现容器和主机间的数据共享
+### （以php + apache为例）怎么把我们写好的网站文件塞入容器中？
+
+**答案是通过挂载将主机的数据（文件夹/文件）映射到容器中去，实现数据共享。**
+
+> **请注意，映射等同于替换。当映射完成之后，容器中被映射的内容也被替换掉。所以应该先对容器中映射的文件夹做好备份。**
 
 you need to stop and remove the container at first
 
@@ -46,13 +48,11 @@ create a folder and named it \_myweb ，\_then create html file, what every entr
 
 so，we still  run the container just like before time，but this time ,we add some para in the order.
 
-**-v**：the left part is our servers path（/root/myweb），the right part is in the docker container centos servers path（/var/www/html）。
+* **-v**：the left part is our servers path（/root/myweb），the right part is in the docker container centos servers path（/var/www/html）。
 
 > $ docker run --privileged -d -p 8080:80 --name  myhttpd -v /root/myweb:/var/www/html centos:httpd /usr/sbin/init
 
-review the web again， just like the images.
+review the web again， just like that！！！
 
 ![](/assets/656456465import.png)
-
-that's very funning!!!
 
