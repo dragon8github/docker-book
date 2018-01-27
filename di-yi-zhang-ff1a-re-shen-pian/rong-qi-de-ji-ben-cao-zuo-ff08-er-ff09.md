@@ -38,13 +38,11 @@ EXPOSE 80
 
 > $ docker build -t centos:httpd .
 
-** （注意，最后有一个点，很重要。代表当前文件夹**）
+** （注意，最后有一个点，很重要。代表当前文件夹中找Dockerfile**）
 
-当然也可以指定Dockerfile
+build完成之后，通过 `$ docker images` 可以看到一个标签（TAG）为 httpd 的 centos 新镜像
 
-> $ docker build -f /path/to/a/Dockerfile .
-
-下载完成之后，通过 `$ docker images` 可以看到出现了一个新镜像叫做centos 只不过标签变成了 httpd
+标签为latest的上一节创建的，和本节没有任何关系，顺带一提这个TAG只是一个标注、注释。并不一定说明该镜像就一定是最新的。
 
 ![](/assets/213123123import.png)
 
@@ -74,7 +72,7 @@ docker 对容器的权限有一定的限制规则
 
 ---
 
-### 🍁 给容器加特权 --privileged 
+### 🍁 给容器加特权 --privileged
 
 给容器加特权,否则交互式方式进入容器无法操作一些譬如修改内核、修改系统参数、甚至启动服务等
 
