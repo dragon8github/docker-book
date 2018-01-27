@@ -70,18 +70,18 @@ sudo systemctl restart docker  # 重启docker
 
 想想虚拟机的话，肯定要启动我们的虚拟机嘛~~~
 
-> $ docker run -d -p 8080:80 &lt;名称或ID&gt;
+> $ docker run -d -p 8080:80 &lt;容器名称或容器ID&gt;
 
 run 把我们的镜像放入容器中（只在第一次运行\)
 
-* -d 启动容器后台运行，并返回ID；
+* -d 启动容器后台运行，并返回ID。否则会卡死当前会话，所以运行容器这个参数可以说是必备的；
 * -p 把容器的80端口映射到宿主机的8080；
 
 > $ docker run -d -p 8080:80 e121d5f99e1e
 
-为什么我们知道容器中启动的端口是80？没有为什么，因为作者就是这样设置的。并且可以通过该镜像的文档看出来。
+为什么我们知道容器中启动的端口是80？没有为什么，因为作者就是这样设置的。我们可以通过该镜像的文档看出来。
 
-![](/assets/123123import.png)
+那我映射容器的81端口行不行？当然不行。这需要创建镜像时设置对外暴露的端口，我们后续会学习到。
 
 ---
 
@@ -99,21 +99,25 @@ run 把我们的镜像放入容器中（只在第一次运行\)
 
 解决办法：\(Linux内核参数配置文件，可在运行时修改某些内核参数，使之永久生效\)
 
-> $ sudovi/etc/sysctl.conf
+> $ sudo vi/etc/sysctl.conf
 
 加入内容 `net.ipv4.ip_forward=1`
 
 保存并退出后 执行
 
-> $ systemctlrestart network
+> $ systemctl restart network
 
 **2、阿里云的安全组配置**
 
 请查看[《第零章：阿里云上购买并配置Centos7》](https://dragon8github.gitbooks.io/docker/content/a-li-yun-shang-gou-mai-he-pei-zhi-centos7.html)
 
-**3、防火墙放行8080端口示例**
+**3、防火墙放行宿主机8080端口示例**
 
 > $ iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+
+如果是centos7.x的话，是使用firewall防火墙来开放端口的
+
+> $ firewall-cmd --permanent --zone=public --add-port=8080/tcp
 
 现在，正常在浏览器上访问我们的 ip + 8080端口，如果可以看到php信息页面，就说明成功了。具体如下
 

@@ -58,8 +58,6 @@
 
 > $ docker pull centos
 
-
-
 由于我们删除了上节课的apache-php，所以只有最新下载的centos镜像了
 
 ![](/assets/562342import.png)
@@ -80,11 +78,13 @@
 
 ![](/assets/342342import.png)**按下 CTRL + D 或 输入 “exit” 可以退出容器。**
 
-
-
 当我们退出容器后，我们使用 `$ docker ps` 发现容器没有在运行列表中。难道他被消灭了吗？NO！只是停止了![](/assets/wq5215123import.png)
 
 我们可以使用 `$ docker ps -a` 查看全部容器，并且用 `$ docker start fuck` 重新启动它。![](/assets/64556import.png)
+
+> 所以说，如果我们不要用 docker run 命令与容器交互。
+>
+> 而是要用到下文中的docker exec 命令，run命令主要用来启动容器即可。
 
 ---
 
@@ -95,8 +95,6 @@
 ![](/assets/123123123123import.png)
 
 上图中，我们先启动了容器fuck，然后输出本机的pwd，是在/root下，再从容器中输入命令pwd，输出了/
-
-
 
 ---
 
@@ -113,4 +111,14 @@
 ![](/assets/12312351import.png)
 
 我们发现，退出之后容器仍然在运行。
+
+总结一下
+
+| 命令 | 说明 |
+| :--- | :--- |
+| $ docker exec -i -t &lt;container&gt; /bin/bash | 如果我想进入容器中 |
+| $ docker exec  &lt;container&gt; echo 123 | 如果我想让容器执行某条命令 |
+| $ docker run -d  -p 9090:80 &lt;images&gt; | 如果我们是要启动一个容器 |
+
+
 
