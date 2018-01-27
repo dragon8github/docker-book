@@ -11,7 +11,7 @@
 
 * [热身一下！随手拉一个PHP容器就是干！](di-yi-zhang-ff1a-re-shen-pian/yun-xing-wai-bu-php-rong-qi.md)
 * [容器的基本操作（一）：和容器进行交互、下载centos容器、常用docker命令](di-yi-zhang-ff1a-re-shen-pian/rong-qi-de-ji-ben-cao-4f5c28-1.md)
-* [容器的基本操作（二）：Dockerfile的使用](di-yi-zhang-ff1a-re-shen-pian/rong-qi-de-ji-ben-cao-zuo-ff08-er-ff09.md)
+* [容器的基本操作（二）：Dockerfile的使用、使用 --privileged 给容器加特权](di-yi-zhang-ff1a-re-shen-pian/rong-qi-de-ji-ben-cao-zuo-ff08-er-ff09.md)
 * [容器的基本操作（三）：将本机的文件夹映射（同步）到容器中](di-yi-zhang-ff1a-re-shen-pian/rong-qi-de-ji-ben-cao-zuo-ff08-san-ff09.md)
 * [容器的基本操作（四）：将主机文件拷贝到容器中去](di-yi-zhang-ff1a-re-shen-pian/rong-qi-de-ji-ben-cao-zuo-ff08-si-ff09.md)
 
