@@ -82,9 +82,9 @@
 
 我们可以使用 `$ docker ps -a` 查看全部容器，并且用 `$ docker start fuck` 重新启动它。![](/assets/64556import.png)
 
-> 所以说，我们会使用 docker run 来创建容器，但不会刻意用 docker run 来与容器交互。
+> 所以说，我们会使用 docker run 来创建容器，但不会刻意用 docker run 来与容器交互。
 >
-> 如果要与容器交互，会用到下文中的 docker exec 命令。而我们只要记住 docker run 命令主要用来创建和启动容器即可。
+> 如果要与容器交互，会用到下文中的 docker exec 命令。而我们只要记住 docker run 命令主要用来创建和启动容器即可。
 
 ---
 
