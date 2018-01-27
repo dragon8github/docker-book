@@ -64,7 +64,7 @@
 
 ---
 
-### 使用 centos 镜像创建容器、并与容器交互
+### 使用 centos 镜像创建容器
 
 `$ docker run <images>`命令的几个常用参数（可以运行 docker run --help 查看更多详细说明）
 
@@ -82,13 +82,13 @@
 
 我们可以使用 `$ docker ps -a` 查看全部容器，并且用 `$ docker start fuck` 重新启动它。![](/assets/64556import.png)
 
-> 所以说，我们会使用 docker run 来创建容器，但不会刻意用 docker run 来与容器交互。
+> 所以说，我们通常会使用 docker run -d 来创建和启动容器，但不会刻意用 docker run -it 来与容器交互（尽管他可以）。
 >
-> 如果要与容器交互，会用到下文中的 docker exec 命令。而我们只要记住 docker run 命令主要用来创建和启动容器即可。
+> 如果要与容器交互，会用到下文中的 docker exec -i -t 命令。而我们只要记住 docker run 命令主要用来创建和启动容器即可。
 
 ---
 
-### exec： 直接从容器中运行命令
+### exec： 直接从容器中运行命令、与容器交互
 
 **注意，该命令只能对已启动的容器使用。所以我们先启动容器。**
 
