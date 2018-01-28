@@ -68,13 +68,14 @@ $  . /etc/profile
 新建 build-jdk 文件夹和 Dockerfile 文件，并且把 /usr/local/jdk-9.0.1 复制一份放进去
 
 ```
-$ mkdir build-jdk
+$ mkdir build-jdk && cd build-jdk
 $ cp -r /usr/local/jdk-9.0.1 /root/build-jdk
 $ vim Dockerfile
 ```
 
 * COPY：将本地的内容拷贝进镜像指定文件夹中；
 * ENV：设置容器的环境变量；
+* CMD：容器启动时默认执行的语句。
 
 ```js
 FROM centos:httpd 
@@ -99,7 +100,7 @@ $ docker build -t centos:jdk .
 
 ### 3、运行容器
 
-为了方便演示，已经将上节课所有的容器都删除了，当然你可以不删除，但需要映射其他端口。否则会一样使用80端口是不行的
+为了方便演示，已经将上节课所有的容器都删除了，当然你可以不删除，但需要映射其他端口。否则会一样使用8080端口是不行的
 
 ```
 $ docker run --privileged -d -p 8080:80 --name  myjdk -v /root/myweb:/var/www/html centos:jdk
