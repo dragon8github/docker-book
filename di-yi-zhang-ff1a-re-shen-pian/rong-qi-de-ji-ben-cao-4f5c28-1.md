@@ -8,8 +8,6 @@
 
 > container是images运行时的的状态。docker对于运行过的image都保留一个状态（container），可以使用命令docker ps来查看正在运行的container，对于已经退出的container，则可以使用docker ps -a来查看。 如果你退出了一个container而忘记保存其中的数据，你可以使用docker ps -a来找到对应的运行过的container使用docker commit命令将其保存为image然后运行。
 
-
-
 **1、查看所有运行中的容器**
 
 > $ docker ps
@@ -114,7 +112,9 @@
 
 我们发现，退出之后容器仍然在运行。
 
-总结一下
+
+
+### 总结一下
 
 | 命令 | 说明 |
 | :--- | :--- |
