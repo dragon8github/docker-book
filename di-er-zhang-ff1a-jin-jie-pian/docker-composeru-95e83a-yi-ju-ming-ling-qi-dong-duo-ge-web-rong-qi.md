@@ -36,9 +36,7 @@
 
 ### 💐 Example
 
-1、创建一个空文件夹，叫做composetest
-
-2、创建一个docker-compose.yml 文件,拷贝如下内容
+创建一个docker-compose.yml 文件,拷贝如下内容
 
 ```js
 services: 
