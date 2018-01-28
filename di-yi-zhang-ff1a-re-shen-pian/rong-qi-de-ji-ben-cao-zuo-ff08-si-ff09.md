@@ -45,10 +45,10 @@ export PATH=$JAVA_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 ```
 
-让 /etc/profile 立即生效
+让 /etc/profile 立即生效（注意: . 和 /etc/profile 之间有空格）
 
 ```
-$ /etc/profile
+$  . /etc/profile
 ```
 
 #### 2、创建 Dockerfile
