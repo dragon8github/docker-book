@@ -4,9 +4,11 @@
 
 ---
 
-### 容器的常用命令
+### 容器与镜像的常用命令
 
 > container是images运行时的的状态。docker对于运行过的image都保留一个状态（container），可以使用命令docker ps来查看正在运行的container，对于已经退出的container，则可以使用docker ps -a来查看。 如果你退出了一个container而忘记保存其中的数据，你可以使用docker ps -a来找到对应的运行过的container使用docker commit命令将其保存为image然后运行。
+
+
 
 **1、查看所有运行中的容器**
 
@@ -38,13 +40,13 @@
 
 ![](/assets/100import.png)
 
-### 镜像的常用命令
-
 1**、查看所有的镜像源**
 
 > $ docker images
 
-2、**删除镜像，只有当所有基于该镜像的容器被删除之后，才可以删除该镜像**
+![](/assets/asdzx12asasdimport.png)
+
+2、**删除镜像，只有当所有基于该镜像的容器被停止并且删除之后，才可以删除该镜像**
 
 > $ docker rmi &lt;IMAGE ID&gt;
 
