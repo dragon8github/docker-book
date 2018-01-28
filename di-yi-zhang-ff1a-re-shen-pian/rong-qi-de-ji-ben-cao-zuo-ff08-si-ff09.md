@@ -30,7 +30,7 @@ $ tar zxvf <目标文件>
 
 ![](/assets/1212123123import.png)
 
-将jdk-9.0.1放置在/usr/local下（规范），然后我们将jdk配置到环境变量中去。
+将jdk-9.0.1放置在/usr/local下（UNIX规范），然后我们将jdk配置到环境变量中去。
 
 ```
 $ mv jdk-9.0.1 /usr/local
@@ -38,6 +38,8 @@ $ vim /etc/profile
 ```
 
 修改 /etc/profile ，加入以下内容
+
+**请注意，笔者的文件夹名为jdk-9.0.1，根据不同版本，名字可能会不同，请根据实际情况配置。**
 
 ```
 export JAVA_HOME=/usr/local/jdk-9.0.1
