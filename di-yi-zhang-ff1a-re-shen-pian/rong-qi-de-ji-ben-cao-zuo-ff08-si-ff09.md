@@ -93,8 +93,6 @@ CMD /usr/sbin/init
 $ docker build -t centos:jdk .
 ```
 
-请注意，最后有一个点（.）哦
-
 ![](/assets/141142123import.png)
 
 #### 3、运行容器
@@ -131,5 +129,19 @@ Java HotSpot(TM) 64-Bit Server VM (build 9.0.1+11, mixed mode)
 
 > 1、解压.tar.gz出错gzip: stdin: not in gzip format tar: /Child returned status 1 tar: Error is not recoverable: exiting now
 
-可能是资源为html导致的，也就是说你下载错了~
+注意，你必须按照此步骤来下载，否则无法正常解压：
+
+1、点击Accept License Agreement；
+
+2、点击 linux-tar-gz 版本，等待下载；
+
+3、在下载列表中复制下载链接，然后取消下载。
+
+拿到下载链接，我们就可以使用wget命令下载了。
+
+```
+$ wget <下载地址>
+```
+
+
 
