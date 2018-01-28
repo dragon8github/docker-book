@@ -6,39 +6,46 @@
 
 [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-![](/assets/65555import.png)![](/assets/3333import.png)
+![](/assets/65555import.png)![](/assets/asdasd2312321import.png)
 
-你需要点击Accept，然后点击linux-tar-gz版本。等待下载，再从资源中复制下载链接
+你需要点击Accept，然后点击 linux-tar-gz 版本。等待下载，再从资源中复制下载链接
 
 接下来就可以使用wget命令下载了
 
-> $ wget [http://download.oracle.com/otn-pub/java/jdk/9.0.1+11/jdk-9.0.1\_linux-x64\_bin.tar.gz?AuthParam=1512527311\_ae7d1cf8bc60fd3f29f0baea498cb2a3](http://download.oracle.com/otn-pub/java/jdk/9.0.1+11/jdk-9.0.1_linux-x64_bin.tar.gz?AuthParam=1512527311_ae7d1cf8bc60fd3f29f0baea498cb2a3)
+```
+$ wget http://download.oracle.com/otn-pub/java/jdk/9.0.1+11/jdk-9.0.1_linux-x64_bin.tar.gz?AuthParam=1512527311_ae7d1cf8bc60fd3f29f0baea498cb2a3
+```
 
 ### ![](/assets/123123123.png)
 
 下载完成后，使用tar命令解压
 
-> $ tar zxvf &lt;.tar.gz压缩文件&gt;
+```
+$ tar zxvf jdk-9.0.4_linux-x64_bin.tar.gz
+```
 
 ![](/assets/1212123123import.png)
 
 将jdk-9.0.1放置在/usr/local下（规范），然后我们将jdk配置到环境变量中去。
 
-> $ mv jdk-9.0.1 /usr/local
->
-> $ vim /etc/profile
+```
+$ mv jdk-9.0.1 /usr/local
+$ vim /etc/profile
+```
 
 修改 /etc/profile ，加入以下内容
 
-> export JAVA\_HOME=/usr/local/jdk-9.0.1
->
-> export PATH=$JAVA\_HOME/bin:$PATH
->
-> export CLASSPATH=.:$JAVA\_HOME/lib/dt.jar:$JAVA\_HOME/lib/tools.jar
+```
+export JAVA_HOME=/usr/local/jdk-9.0.1
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+```
 
 让 /etc/profile 立即生效
 
-> $  /etc/profile
+```
+$ /etc/profile
+```
 
 #### 2、创建 Dockerfile
 
@@ -52,11 +59,11 @@
 
 新建 build-jdk 文件夹和 Dockerfile 文件，并且将 jdk-9.0.1 复制一份到其中
 
-> $ mkdir build-jdk
->
-> $ cp -r /usr/local/jdk-9.0.1 /root/build-jdk
->
-> $ vim Dockerfile
+```
+$ mkdir build-jdk
+$ cp -r /usr/local/jdk-9.0.1 /root/build-jdk
+$ vim Dockerfile
+```
 
 ![](/assets/45346import.png)
 
@@ -76,7 +83,9 @@ CMD /usr/sbin/init
 
 开始构建镜像
 
-> docker build -t centos:jdk .
+```
+$ docker build -t centos:jdk .
+```
 
 请注意，最后有一个点（.）哦
 
@@ -86,7 +95,9 @@ CMD /usr/sbin/init
 
 为了方便演示，已经将上节课所有的容器都删除了，当然你可以不删除，但需要映射其他端口。否则会一样使用80端口是不行的
 
-> docker run --privileged -d -p 8080:80 --name  myjdk -v /root/myweb:/var/www/html centos:jdk
+```
+$ docker run --privileged -d -p 8080:80 --name  myjdk -v /root/myweb:/var/www/html centos:jdk
+```
 
 ![](/assets/231234342234342import.png)
 
@@ -98,15 +109,13 @@ CMD /usr/sbin/init
 
 再来看看jdk的情况，我们进入容器内部，查看jdk版本（已经将jdk设置到容器的环境变量中）
 
-> $ docker exec -it myjdk /bin/bash
->
-> $ java -version
->
-> java version "9.0.1"
->
-> Java\(TM\) SE Runtime Environment \(build 9.0.1+11\)
->
-> Java HotSpot\(TM\) 64-Bit Server VM \(build 9.0.1+11, mixed mode\)
+```
+$ docker exec -it myjdk /bin/bash
+$ java -version
+java version "9.0.1"
+Java(TM) SE Runtime Environment (build 9.0.1+11)
+Java HotSpot(TM) 64-Bit Server VM (build 9.0.1+11, mixed mode)
+```
 
 ![](/assets/16735468import.png)
 

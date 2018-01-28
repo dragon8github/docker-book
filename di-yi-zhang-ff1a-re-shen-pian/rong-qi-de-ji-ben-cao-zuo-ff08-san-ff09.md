@@ -1,25 +1,21 @@
-### 手动在进入容器，在apache中新建一个测试页面
+### 手动在进入容器，在Apache中新建一个测试页面
 
-我们先进入容器内部，然后打开apache配置文件。
+我们先进入容器内部，然后打开 Apache 配置文件。
 
-apache的配置文件存放目录默认在：/etc/httpd/conf/httpd.conf
+Apache 的配置文件存放目录默认在：/etc/httpd/conf/httpd.conf
 
 ```
 $ docker exec -i -t myhttpd /bin/bash
 $ cat /etc/httpd/conf/httpd.conf
 ```
 
-然后找到 DocumentRoot 关键字，发现站点目录在 /var/www/html 下
-
-![](/assets/353import.png)
-
-在apache站点目录下新建一个index.html，然后在外部浏览器中访问看看情况
+然后找到 DocumentRoot 关键字，发现站点目录在 /var/www/html 下![](/assets/353import.png)在apache站点目录下新建一个index.html
 
 ```
-$ cd /var/www/html
-$ ls
-$ echo 123 > index.html
+$ echo 123 > /var/www/html/index.html
 ```
+
+在浏览器中访问看看情况
 
 ![](/assets/5412import.png)
 
@@ -27,7 +23,7 @@ $ echo 123 > index.html
 
 ### 怎么把我们写好的网站文件塞入容器中（以php + apache为例）
 
-答案是通过挂载将主机的数据（文件夹/文件）映射到容器中去，实现数据共享。    
+答案是通过挂载将主机的数据（文件夹/文件）映射到容器中去，实现数据共享。
 
 **请注意，映射等于同步。当映射完成之后，容器中被映射的内容也被替换掉。所以应该先对容器中映射的文件夹做好备份。**
 
