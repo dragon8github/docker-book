@@ -6,14 +6,20 @@
 
 [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-![](/assets/65555import.png)![](/assets/asdasd2312321import.png)
+![](/assets/65555import.png)![](/assets/zasdijijaisdj2183import.png)
 
-你需要点击Accept，然后点击 linux-tar-gz 版本。等待下载，再从资源中复制下载链接
+注意，你必须按照此步骤来下载，否则无法正常解压：
 
-接下来就可以使用wget命令下载了
+1、点击Accept License Agreement；
+
+2、点击 linux-tar-gz 版本，等待下载；
+
+3、在下载列表中复制下载链接，然后取消下载。
+
+拿到下载链接，我们就可以使用wget命令下载了。
 
 ```
-$ wget http://download.oracle.com/otn-pub/java/jdk/9.0.1+11/jdk-9.0.1_linux-x64_bin.tar.gz?AuthParam=1512527311_ae7d1cf8bc60fd3f29f0baea498cb2a3
+$ wget <下载地址>
 ```
 
 ### ![](/assets/123123123.png)
@@ -21,7 +27,7 @@ $ wget http://download.oracle.com/otn-pub/java/jdk/9.0.1+11/jdk-9.0.1_linux-x64_
 下载完成后，使用tar命令解压
 
 ```
-$ tar zxvf jdk-9.0.4_linux-x64_bin.tar.gz
+$ tar zxvf <目标文件>
 ```
 
 ![](/assets/1212123123import.png)
