@@ -105,15 +105,13 @@ $ docker run --privileged -d -p 8080:80 --name  myjdk -v /root/myweb:/var/www/ht
 
 ![](/assets/231234342234342import.png)
 
-启动成功之后，我们依然访问一下浏览器，发现apache还是正常运行的。
-
-这是理所当然的，因为我们的镜像本来就是基于httpd镜像的。
+启动成功之后，我们依然访问一下浏览器，确保 Apache 还是正常运行的。
 
 ![](/assets/23123123123import.png)
 
-再来看看jdk的情况，我们进入容器内部，查看jdk版本（已经将jdk设置到容器的环境变量中）
+然后再来看看 jdk 的情况，我们进入容器内部，查看jdk版本（我们刚刚已经通过Dockerfile将jdk设置到容器的环境变量中了）
 
-```
+```bash
 $ docker exec -it myjdk /bin/bash
 $ java -version
 java version "9.0.1"
