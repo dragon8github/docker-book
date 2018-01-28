@@ -12,7 +12,7 @@
 
 1. 点击Accept License Agreement；
 2. 点击 linux-tar-gz 版本，等待下载；
-3. 在下载列表中复制下载链接，然后取消下载。
+3. 从下载列表中复制下载链接，然后取消下载。
 
 拿到下载链接，我们就可以使用wget命令下载了。
 
@@ -129,7 +129,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 9.0.1+11, mixed mode)
 
 > gzip: stdin: not in gzip format tar: /
 >
-> Child returned status 1 
+> Child returned status 1
 >
 > tar: Error is not recoverable: exiting now
 
