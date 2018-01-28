@@ -4,9 +4,10 @@
 
 apache的配置文件存放目录默认在：/etc/httpd/conf/httpd.conf
 
-> $ docker exec -i -t myhttpd /bin/bash
->
-> $ cat /etc/httpd/conf/httpd.conf
+```
+$ docker exec -i -t myhttpd /bin/bash
+$ cat /etc/httpd/conf/httpd.conf
+```
 
 然后找到 DocumentRoot 关键字，发现站点目录在 /var/www/html 下
 
@@ -14,52 +15,54 @@ apache的配置文件存放目录默认在：/etc/httpd/conf/httpd.conf
 
 在apache站点目录下新建一个index.html，然后在外部浏览器中访问看看情况
 
-> $ cd /var/www/html
->
-> $ ls
->
-> $ echo 123 &gt; index.html
+```
+$ cd /var/www/html
+$ ls
+$ echo 123 > index.html
+```
 
 ![](/assets/5412import.png)
 
 ---
 
-### （以php + apache为例）怎么把我们写好的网站文件塞入容器中？
+### 怎么把我们写好的网站文件塞入容器中（以php + apache为例）
 
-**答案是通过挂载将主机的数据（文件夹/文件）映射到容器中去，实现数据共享。    
-**
+答案是通过挂载将主机的数据（文件夹/文件）映射到容器中去，实现数据共享。    
 
-> **请注意，映射等于同步。当映射完成之后，容器中被映射的内容也被替换掉。所以应该先对容器中映射的文件夹做好备份。**
->
-> 同步的效果就是：当主机修改时，容器也会跟着修改，当容器修改时，主机也会跟着修改。
->
-> 但目前发现文件夹可以同步，而文件不能同步。只在首次启动时会同步。不知为何需要进一步研究。
+**请注意，映射等于同步。当映射完成之后，容器中被映射的内容也被替换掉。所以应该先对容器中映射的文件夹做好备份。**
 
-you need to stop and remove the container at first
+映射的效果就是：当主机修改时，容器也会跟着修改，当容器修改时，主机也会跟着修改。
 
-> $ docker stop myhttpd
->
-> $ docker rm myhttpd
+目前发现文件夹可以一直保持这种同步，而文件却仅在初次启动容器时同步，而后修改就不同步了。需要进一步研究。
 
-create a folder and named it \_myweb ，\_then create html file, what every entry something word in that. just like that:
+1、让我们先删除刚刚的容器
 
-> $ pwd
->
-> /root
->
-> $ mkdir myweb
->
-> $ cd myweb
->
-> $ echo fuck &gt; index.html
+```
+$ docker stop myhttpd
+$ docker rm myhttpd
+```
 
-so，we still  run the container just like before time，but this time ,we add some para in the order.
+2、创建一个文件夹 myweb，用来保存网站内容，并新建 index.html 用来演示
 
-* **-v**：the left part is our servers path（/root/myweb），the right part is in the docker container centos servers path（/var/www/html）。
+```
+$ mkdir myweb
+$ echo fuck > myweb/index.html
+```
 
-> $ docker run --privileged -d -p 8080:80 --name  myhttpd -v /root/myweb:/var/www/html centos:httpd /usr/sbin/init
+3、启动容器
 
-review the web again， just like that！！！
+* -v：冒号左边是我们的宿主机资源路径（/root/myweb），冒号右边是容器资源路径（/var/www/html）。请注意当启动完成之后，容器路径中的资源将会被宿主机的资源替换掉。所以最好先做好备份，如果需要映射多个资源路径，执行多次-v即可；
+* -d：后台运行容器，否则会卡死当前会话；
+* --privileged：给容器加特权，否则什么事都做不了；
+* -p：和本机映射的端口，冒号左边是宿主机的端口，冒号右边是容器暴露出来的端口；
+* --name：容器的别名。
+* /usr/sbin/init：启动容器后，容器第一句执行的命令。但作用不明，可能是初始化吧。
+
+```
+$ docker run --privileged -d -p 8080:80 --name  myhttpd -v /root/myweb:/var/www/html centos:httpd /usr/sbin/init
+```
+
+4、浏览网页
 
 ![](/assets/656456465import.png)
 
