@@ -112,14 +112,12 @@
 
 我们发现，退出之后容器仍然在运行。
 
-
-
 ### 总结一下
 
 | 命令 | 说明 |
 | :--- | :--- |
 | $ docker exec -i -t &lt;container&gt; /bin/bash | 如果我想进入容器中 |
-| $ docker exec  &lt;container&gt; echo 123 | 如果我想让容器执行某条命令 |
+| $ docker exec  &lt;container&gt; echo 123 | 如果我想让容器执行某条命令（容器必须是启动的） |
 | $ docker run -d  -p 9090:80 &lt;images&gt; | 如果我们是要启动一个容器 |
 
 
