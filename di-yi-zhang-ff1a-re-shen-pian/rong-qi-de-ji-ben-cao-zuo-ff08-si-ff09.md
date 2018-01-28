@@ -55,7 +55,7 @@ $  . /etc/profile
 
 #### 2、创建 Dockerfile
 
-本节课我们将创造的镜像，是基于上节课centos:httpd镜像（该镜像也是基于 centos 官方镜像搭建）
+本节课我们将创造的镜像，是基于上节课 centos:httpd 镜像（该镜像也是基于 centos 官方镜像搭建）
 
 在真实开发时，我们搭建流程中也是这样的，先有一个纯净（centos），再做一些基本工作（添加httpd、jdk、redis之类）。
 
