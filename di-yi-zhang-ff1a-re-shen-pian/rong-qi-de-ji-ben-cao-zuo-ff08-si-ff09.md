@@ -1,5 +1,15 @@
 这节课我们将下载到宿主机的JDK，拷贝到容器中去。
 
+本节课我们将创造的镜像，是基于上节课 centos:httpd 镜像（该镜像也是基于 centos 官方镜像搭建）
+
+在真实开发时，我们搭建流程中也是这样的，先有一个纯净（centos），再做一些基本工作（添加httpd、jdk、redis之类）。
+
+然后再一次叠加叠层。实战的镜像就是这样一步一步的搭建起来的。这样我们既拥有一些高级的镜像，也拥有一些底层的镜像。
+
+![](/assets/34345345import.png)
+
+---
+
 ### 1、下载jdk（Java SE Development Kit）
 
 前往java官方下载地址
@@ -47,7 +57,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 ```
 
-让 /etc/profile 立即生效（注意: . 和 /etc/profile 之间有空格）
+让 /etc/profile 立即生效（注意 . 和 /etc/profile 之间有空格）
 
 ```
 $  . /etc/profile
@@ -55,25 +65,13 @@ $  . /etc/profile
 
 ### 2、创建 Dockerfile
 
-本节课我们将创造的镜像，是基于上节课 centos:httpd 镜像（该镜像也是基于 centos 官方镜像搭建）
-
-在真实开发时，我们搭建流程中也是这样的，先有一个纯净（centos），再做一些基本工作（添加httpd、jdk、redis之类）。
-
-然后再一次叠加叠层。实战的镜像就是这样一步一步的搭建起来的。这样我们既拥有一些高级的镜像，也拥有一些底层的镜像。
-
-![](/assets/34345345import.png)
-
-新建 build-jdk 文件夹和 Dockerfile 文件，并且将 jdk-9.0.1 复制一份到其中
+新建 build-jdk 文件夹和 Dockerfile 文件，并且把 /usr/local/jdk-9.0.1 复制一份放进去
 
 ```
 $ mkdir build-jdk
 $ cp -r /usr/local/jdk-9.0.1 /root/build-jdk
 $ vim Dockerfile
 ```
-
-![](/assets/45346import.png)
-
-**请注意，这里的jdk-9.0.1 是在当前目录下的，也就是和Dockerfile文件同目录**
 
 * COPY：将本地的内容拷贝进镜像指定文件夹中；
 * ENV：设置容器的环境变量；
@@ -87,7 +85,11 @@ ENV CLASSPATH .:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 CMD /usr/sbin/init
 ```
 
-开始构建镜像
+**请注意，这里的jdk-9.0.1 必须是和 Dockerfile 文件同目录**
+
+![](/assets/45346import.png)
+
+### 3、开始构建镜像
 
 ```
 $ docker build -t centos:jdk .

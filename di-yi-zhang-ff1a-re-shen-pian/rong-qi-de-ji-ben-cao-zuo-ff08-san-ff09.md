@@ -34,8 +34,7 @@ $ echo 123 > /var/www/html/index.html
 1、让我们先删除刚刚的容器
 
 ```
-$ docker stop myhttpd
-$ docker rm myhttpd
+$ docker stop myhttpd && docker rm myhttpd
 ```
 
 2、创建一个文件夹 myweb，用来保存网站内容，并新建 index.html 用来演示
