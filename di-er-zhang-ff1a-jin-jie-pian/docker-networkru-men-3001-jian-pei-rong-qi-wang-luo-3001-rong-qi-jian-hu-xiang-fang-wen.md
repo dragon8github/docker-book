@@ -30,5 +30,21 @@
 
 ### 💻 创建一个网络
 
+参考文档：https://docs.docker.com/engine/reference/commandline/network\_create/\#extended-description
+
+子网掩码：http://tool.chinaz.com/Tools/subnetmask
+
+■ 最简单语法
+
+```
+$ docker network create -d bridge mynginx 
+```
+
+■ 设置子网地址
+
+```
+$ docker network create -d bridge --subnet=192.128.0.0/16 mynginx
+```
+
 
 
