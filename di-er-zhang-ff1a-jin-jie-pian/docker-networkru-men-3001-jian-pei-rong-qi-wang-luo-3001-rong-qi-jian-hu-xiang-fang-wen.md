@@ -34,13 +34,13 @@
 
 子网掩码：[http://tool.chinaz.com/Tools/subnetmask](http://tool.chinaz.com/Tools/subnetmask)
 
-■ 最简单语法
+► 最简单语法
 
 ```
 $ docker network create -d bridge mynginx
 ```
 
-■ 设置子网地址
+► 设置子网地址
 
 ```
 $ docker network create -d bridge --subnet=192.128.0.0/16 mynginx
@@ -50,10 +50,10 @@ $ docker network create -d bridge --subnet=192.128.0.0/16 mynginx
 
 ### 👏 容器加入网络
 
-启动容器时就可以加入 --network 参数， 创建的容器会加入这个网络。
+启动容器时就可以加入 --network 参数， 创建的容器会加入这个网络。
 
 ```
-$ docker run -d --network=mynginx 
+$ docker run -d --network=mynginx
 ```
 
 
