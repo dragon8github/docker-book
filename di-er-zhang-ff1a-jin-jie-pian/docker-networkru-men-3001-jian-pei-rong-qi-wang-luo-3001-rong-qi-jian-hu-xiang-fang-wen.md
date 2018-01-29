@@ -6,7 +6,7 @@
 
 默认会创建桥接模式 bridge（当我们启动容器时，默认会加入bridge这个网络）。
 
-其中 \*\_default 是我们使用Docker Compose创建时默认添加的。
+其中 \*\_default 是我们使用 Docker Compose 创建时默认添加的。
 
 ![](/assets/阿萨德import.png)
 
@@ -20,9 +20,17 @@
 
 🔎 举个例子，我们随便进入其中一个java容器中`$ docker exec -it web1 /bin/bash`
 
-然后使用 `$ cat /etc/hosts`来查看网络配置。再通过ping、curl等命令测试。发现他们的确实是处于同一网关的。
+然后使用 `$ cat /etc/hosts`来查看网络配置。再通过ping、curl等命令测试。发现他们的确实是处于同一网关的。
+
+反过来说，如果容器与容器之间不在统一网关，他们就无法互相访问。
+
+🍒  那么，在非 Docker Compose 来创建的容器 与 容器之间，如何建立统一网关呢？
+
+这就是我们本节课将要学到的内容。
 
 ---
+
+
 
 
 
