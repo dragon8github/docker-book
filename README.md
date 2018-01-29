@@ -10,7 +10,7 @@ Docker官网对Docker的定义如下：
 
 # Docker Hub是什么？
 
-Docker Hub是一个云端服务，可以用它共享应用或自动化工作流。
+Docker Hub是一个云端服务平台，可以用它共享镜像。
 
 ---
 
