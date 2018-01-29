@@ -16,7 +16,7 @@
 
 也就是说，这两个容器之间可以通过ip的方式进行互通。
 
-🔎 举个例子，我们随便进入其中一个java容器中`$ docker exec -it web1 /bin/bash`
+🔎 举个例子，我们随便进入其中一个 web1 容器中`$ docker exec -it web1 /bin/bash`
 
 然后使用 `$ cat /etc/hosts`来查看网络配置。再通过ping、curl等命令测试。发现他们的确实是处于同一网关的。
 
