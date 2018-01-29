@@ -30,20 +30,30 @@
 
 ### 💻 创建一个网络
 
-参考文档：https://docs.docker.com/engine/reference/commandline/network\_create/\#extended-description
+参考文档：[https://docs.docker.com/engine/reference/commandline/network\_create/\#extended-description](https://docs.docker.com/engine/reference/commandline/network_create/#extended-description)
 
-子网掩码：http://tool.chinaz.com/Tools/subnetmask
+子网掩码：[http://tool.chinaz.com/Tools/subnetmask](http://tool.chinaz.com/Tools/subnetmask)
 
 ■ 最简单语法
 
 ```
-$ docker network create -d bridge mynginx 
+$ docker network create -d bridge mynginx
 ```
 
 ■ 设置子网地址
 
 ```
 $ docker network create -d bridge --subnet=192.128.0.0/16 mynginx
+```
+
+---
+
+### 👏 容器加入网络
+
+启动容器时就可以加入 --network 参数， 创建的容器会加入这个网络。
+
+```
+$ docker run -d --network=mynginx 
 ```
 
 
