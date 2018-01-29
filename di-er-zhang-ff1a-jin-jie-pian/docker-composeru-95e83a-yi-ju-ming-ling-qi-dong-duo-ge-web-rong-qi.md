@@ -17,7 +17,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 ### 👆 测试
 
 ```
-$  docker-compose -v
+$ docker-compose -v
 docker-compose version 1.18.0, build 8dd22a9
 ```
 
@@ -25,9 +25,9 @@ docker-compose version 1.18.0, build 8dd22a9
 
 ### 📀 docker-compose.yml
 
-引导教程：https://docs.docker.com/compose/gettingstarted/\#step-1-setup
+引导教程：[https://docs.docker.com/compose/gettingstarted/\#step-1-setup](https://docs.docker.com/compose/gettingstarted/#step-1-setup)
 
-支持的相关参数列表 ，要多查阅多试：https://docs.docker.com/compose/compose-file/\#build
+支持的相关参数列表 ，要多查阅多试：[https://docs.docker.com/compose/compose-file/\#build](https://docs.docker.com/compose/compose-file/#build)
 
 相关yaml检查的在线工具：[http://www.yamllint.com/](https://www.gitbook.com/book/dragon8github/docker/edit#)
 
