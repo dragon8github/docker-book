@@ -29,13 +29,13 @@ $ echo 123 > /var/www/html/index.html
 
 当容器启动时，容器中被映射的内容也被替换掉。所以应该先对容器中映射的文件夹做好备份。
 
-宿主机文件复制到容器中：**$ docker cp &lt;宿主机文件路径&gt; &lt;容器id/容器name&gt;:&lt;容器路径&gt;，**示例如下：
+宿主机文件复制到容器中：**$ docker cp &lt;宿主机文件路径&gt; &lt;容器id/容器name&gt;:&lt;容器路径&gt;，**示例如下：
 
 ```
 $ docker cp /root/php/www/index.html ca798fee7920:/var/www/
 ```
 
-将容器中的文件复制到宿主机中：**$ docker cp &lt;容器id/容器name&gt;:&lt;文件路径&gt; &lt;宿主机路径&gt;，**示例如下：
+将容器中的文件复制到宿主机中：**$ docker cp &lt;容器id/容器name&gt;:&lt;文件路径&gt; &lt;宿主机路径&gt;，**示例如下：
 
 ```
 $ docker cp ca798fee7920:/var/www/ /root/php/
