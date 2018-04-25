@@ -6,6 +6,7 @@
 * [阿里云上购买并配置 Centos7](a-li-yun-shang-gou-mai-he-pei-zhi-centos7.md)
 * [centos 7 安装 docker（旧）](centos-70-an-zhuang-docker.md)
 * [centos 7 安装 docker（新）](centos7-an-zhuang-docker-ff08-xin-ff09.md)
+* [！！！！不要翻墙访问阿里云！！！！](qian-wan-bu-yao-fan-qiang-fang-wen-a-li-yun.md)
 
 ## 第一章：热身篇
 
