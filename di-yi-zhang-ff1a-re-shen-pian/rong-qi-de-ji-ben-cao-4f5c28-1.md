@@ -48,6 +48,24 @@
 
 > $ docker rmi &lt;IMAGE ID&gt;
 
+
+
+3、宿主机文件复制到容器中：**$ docker cp &lt;宿主机文件路径&gt; &lt;容器id/容器name&gt;:&lt;容器路径&gt;，**示例如下：
+
+```
+$ docker cp /root/php/www/index.html ca798fee7920:/var/www/
+```
+
+
+
+4、将容器中的文件复制到宿主机中：**$ docker cp &lt;容器id/容器name&gt;:&lt;文件路径&gt; &lt;宿主机路径&gt;，**示例如下：
+
+```
+$ docker cp ca798fee7920:/var/www/ /root/php/
+```
+
+
+
 ---
 
 ### 下载官方的镜像源
