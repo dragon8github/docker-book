@@ -70,7 +70,7 @@ sudo systemctl restart docker  # 重启docker
 
 想想虚拟机的话，肯定要启动我们的虚拟机嘛~~~
 
-> $ docker run -d -p 8080:80 &lt;容器名称或容器ID&gt;
+> $ docker run -d -p 8080:80 &lt;镜像名称或镜像ID&gt;
 
 run 把我们的镜像放入容器中（只在第一次运行\)
 
